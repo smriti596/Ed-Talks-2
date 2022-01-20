@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ModernLogin</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="ED_Talk">ED_Talk</string>
+    <string name="new_user_register_now">New User? Register Now</string>
+    <string name="forgot_password">forgot Password?</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account">Already have an account?</string>
+</resources>
