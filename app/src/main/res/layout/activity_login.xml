@@ -110,8 +110,8 @@
 
             <TextView
                 style="@style/parent"
+                android:id="@+id/textview_register"
                 android:layout_marginTop="@dimen/loginViewsMargin"
-                android:onClick="onLoginClick"
                 android:text="@string/new_user_register_now"
                 android:textColor="@color/themeColor"
                 android:textSize="17sp"
