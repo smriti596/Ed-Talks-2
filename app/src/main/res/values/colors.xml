@@ -6,6 +6,7 @@
     <color name="themeColor">#11CFC5</color>
     <color name="purple_200">#C39BD3</color>
     <color name="purple_700">#D2B4DE</color>
+    <color name="black">#000000</color>
     <color name="white">#FDFEFE</color>
 <color name="purple_500">#BB8FCE</color>
     <color name="teal_200">#48C9B0</color>
