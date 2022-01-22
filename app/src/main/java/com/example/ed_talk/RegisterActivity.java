@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
@@ -108,8 +109,18 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                                 public void onComplete(@NonNull Task<Void> task) {
 
                                     if(task.isSuccessful()){
-                                        Toast.makeText(RegisterActivity.this,"User has been registered successfully!",Toast.LENGTH_LONG).show();
-                                        progressBar.setVisibility((View.GONE));
+
+                                        FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+                                        if(user.isEmailVerified()){
+                                            //redirect-temporarily displayed toast message.
+                                            Toast.makeText(RegisterActivity.this,"User has been registered successfully!",Toast.LENGTH_LONG).show();
+                                            progressBar.setVisibility((View.GONE));
+                                        }else{
+                                            user.sendEmailVerification();
+                                            Toast.makeText(RegisterActivity.this,"Check your email to verify your account",Toast.LENGTH_LONG).show();
+                                            progressBar.setVisibility((View.GONE));
+                                        }
+
                                     }else{
                                         Toast.makeText(RegisterActivity.this,"Failed to register! Try again",Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility((View.GONE));
