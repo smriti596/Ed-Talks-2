@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,10 +21,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView register;
+    private TextView register,forgotPassword;
     private EditText editTextUserEmail,editTextUserPassword;
-    Button logIn;
+    private Button logIn;
+
+
     private FirebaseAuth mAuth;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +45,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         editTextUserEmail=(EditText) findViewById(R.id.editTextEmail);
         editTextUserPassword=(EditText) findViewById(R.id.editTextPassword);
 
+        progressBar=(ProgressBar) findViewById(R.id.progressBar);
         mAuth=FirebaseAuth.getInstance();
 
+        forgotPassword=(TextView) findViewById(R.id.forgot_password);
+        forgotPassword.setOnClickListener(this);
 
     }
 
@@ -54,6 +61,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.cirLoginButton:
                 userLogIn();
+                break;
+            case R.id.forgot_password:
+                startActivity(new Intent(this,ForgotPasswordActivity.class));
+                break;
         }
 
     }
@@ -82,6 +93,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             editTextUserPassword.requestFocus();
             return;
         }
+        progressBar.setVisibility(View.VISIBLE);
         mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -89,10 +101,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     //redirect
                     //displaying success message temporarily
                     Toast.makeText(LoginActivity.this,"Successfully logged in you FUCKIN' DICKHEAD",Toast.LENGTH_LONG).show();
-
+                    progressBar.setVisibility((View.GONE));
                 }else
                 {
                     Toast.makeText(LoginActivity.this,"Failed to login! Please check your credentials.",Toast.LENGTH_LONG).show();
+                    progressBar.setVisibility((View.GONE));
                 }
             }
         });
