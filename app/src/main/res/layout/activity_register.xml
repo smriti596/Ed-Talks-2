@@ -130,8 +130,8 @@
 
                     <TextView
                         style="@style/parent"
+                        android:id="@+id/textview_logIn"
                         android:layout_marginTop="@dimen/loginViewsMargin"
-                        android:onClick="onLoginClick"
                         android:text="@string/already_have_an_account"
                         android:textAlignment="center"
                         android:textColor="@color/themeColor"

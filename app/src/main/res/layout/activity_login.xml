@@ -27,12 +27,13 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:textSize="20sp"
                     android:text="Already\nhave an \n Account?"
+                    android:textSize="20sp"
 
                     />
 
@@ -40,9 +41,9 @@
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
+                    android:text="Ed_Talk"
                     android:textColor="@color/colorAccent"
                     android:textSize="40sp"
-                    android:text="Ed_Talk"
 
                     />
 
@@ -85,6 +86,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
+                android:id="@+id/forgot_password"
                 style="@style/viewParent"
                 android:layout_gravity="end"
                 android:layout_marginTop="10dp"
@@ -93,29 +95,29 @@
                 android:textSize="@dimen/newsMoreTextSize" />
 
 
-                <Button
-                    android:layout_height="wrap_content"
-                   android:layout_width="wrap_content"
+            <Button
                 android:id="@+id/cirLoginButton"
                 style="@style/loginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/loginViewsMargin"
                 android:text="Login">
-               <!-- android:initialCornerAngle="27dp"
+                <!-- android:initialCornerAngle="27dp"
                 android:spinning_bar_color="#FFF"
                 android:spinning_bar_padding="6dp"
                 android:spinning_bar_width="4dp" -->
 
-                </Button>
+            </Button>
 
             <TextView
-                style="@style/parent"
                 android:id="@+id/textview_register"
+                style="@style/parent"
                 android:layout_marginTop="@dimen/loginViewsMargin"
                 android:text="@string/new_user_register_now"
                 android:textColor="@color/themeColor"
                 android:textSize="17sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -123,11 +125,13 @@
                 android:layout_marginTop="30dp"
                 android:gravity="center"
                 android:weightSum="12">
+
                 <View
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:layout_weight="3"
-                    android:background="@color/colorPrimaryDark"/>
+                    android:background="@color/colorPrimaryDark" />
+
                 <TextView
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_width="wrap_content"
@@ -135,8 +139,7 @@
                     android:layout_weight="6"
                     android:text="Use Other Methods"
                     android:textAlignment="center"
-                    android:textSize="12sp"/>
-
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
@@ -146,18 +149,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_facebook"/>
+                    android:src="@drawable/ic_facebook" />
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
 
-                    android:src="@drawable/ic_google_plus"/>
-
-
+                    android:src="@drawable/ic_google_plus" />
 
 
             </LinearLayout>

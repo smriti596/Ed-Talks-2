@@ -23,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView registerUser;
+    private TextView registerUser,logInTextView;
     private EditText editTextUserName, editTextUserAge, editTextUserEmail, editTextUserPassword;
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
@@ -42,6 +42,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         editTextUserEmail=(EditText) findViewById(R.id.editTextEmail);
         editTextUserPassword=(EditText) findViewById(R.id.editTextPassword);
         progressBar=(ProgressBar) findViewById(R.id.progressBar);
+        logInTextView=(TextView) findViewById(R.id.textview_logIn);
+        logInTextView.setOnClickListener(this);
 
     }
 
@@ -51,6 +53,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         switch ((view.getId())){
             case R.id.cirRegisterButton:
                 registerUser();
+                break;
+            case R.id.textview_logIn:
+                startActivity(new Intent(this,LoginActivity.class));
+                break;
         }
 
     }
