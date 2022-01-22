@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "929358662443",
+    "firebase_url": "https://ed-talks-default-rtdb.firebaseio.com",
+    "project_id": "ed-talks",
+    "storage_bucket": "ed-talks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929358662443:android:22306f2f21991ece22d36e",
+        "android_client_info": {
+          "package_name": "com.example.ed_talk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929358662443-d2tt42mlfkb9ep4us6r7p90rpt4ugfda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJb786HOJxBPi7PSElYWViCh91xJqI6A8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929358662443-d2tt42mlfkb9ep4us6r7p90rpt4ugfda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
