@@ -7,4 +7,21 @@
     <string name="forgot_password">forgot Password?</string>
     <string name="register">Register</string>
     <string name="already_have_an_account">Already have an account?</string>
+
+    <!--Intro slider Texts-->
+    <string name="next">NEXT</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title"> ED TALKS</string>
+    <string name="slide_1_desc">Welcome to My TAP : A Portal for Banasthali Vidyapith students to View and Share their Interview Experiences.</string>
+
+    <string name="slide_2_title">Interview Experiences</string>
+    <string name="slide_2_desc">Read Placement and Internship Interview Experiences posted by the students of Banasthali Vidyapith.</string>
+
+    <string name="slide_3_title">Add Experience</string>
+    <string name="slide_3_desc">Share your Placement or Internship Interview Experience to help others </string>
+
+    <string name="slide_4_title">Extras</string>
+    <string name="slide_4_desc">Know the Past Recruiters and Placement Statistics of Banasthali Vidyapith</string>
+
 </resources>
