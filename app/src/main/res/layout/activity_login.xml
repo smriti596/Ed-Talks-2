@@ -93,6 +93,15 @@
                 android:text="@string/forgot_password"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="@dimen/newsMoreTextSize" />
+            <TextView
+                android:id="@+id/resend_verificationMail"
+                style="@style/viewParent"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:text="Resend verification mail"
+                android:visibility="gone"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/newsMoreTextSize" />
 
 
             <Button

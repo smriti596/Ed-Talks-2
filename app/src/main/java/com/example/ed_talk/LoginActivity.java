@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView register,forgotPassword;
+    private TextView register,forgotPassword,resendVerificationMail;
     private EditText editTextUserEmail,editTextUserPassword;
     private Button logIn;
 
@@ -46,6 +46,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         editTextUserEmail=(EditText) findViewById(R.id.editTextEmail);
         editTextUserPassword=(EditText) findViewById(R.id.editTextPassword);
 
+        resendVerificationMail=(TextView) findViewById(R.id.resend_verificationMail);
+        resendVerificationMail.setOnClickListener(this);
+
         progressBar=(ProgressBar) findViewById(R.id.progressBar);
         mAuth=FirebaseAuth.getInstance();
 
@@ -66,7 +69,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.forgot_password:
                 startActivity(new Intent(this,ForgotPasswordActivity.class));
                 break;
+            case R.id.resend_verificationMail:
+                resendmail();
+                break;
+
+
         }
+
+    }
+    private void resendmail(){
+        progressBar.setVisibility(View.VISIBLE);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        user.sendEmailVerification();
+        Toast.makeText(LoginActivity.this,"Check your email to verify your account",Toast.LENGTH_LONG).show();
+        progressBar.setVisibility((View.GONE));
 
     }
 
@@ -107,9 +123,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         //redirect-temporarily displayed toast message.
                         Toast.makeText(LoginActivity.this,"Successfully logged in you FUCKIN' DICKHEAD",Toast.LENGTH_LONG).show();
                         progressBar.setVisibility((View.GONE));
+                        resendVerificationMail.setVisibility(View.GONE);
+
                     }else{
-                        user.sendEmailVerification();
-                        Toast.makeText(LoginActivity.this,"Email not verified! Check your mail box and Try Again!",Toast.LENGTH_LONG).show();
+//                        user.sendEmailVerification();
+                        resendVerificationMail.setVisibility(View.VISIBLE);
+                        Toast.makeText(LoginActivity.this,"Email not verified! Verify your email and Try Again!",Toast.LENGTH_LONG).show();
                         progressBar.setVisibility((View.GONE));
                     }
 
