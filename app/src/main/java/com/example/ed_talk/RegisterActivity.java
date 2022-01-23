@@ -123,18 +123,18 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                                             progressBar.setVisibility((View.GONE));
                                         }else{
                                             user.sendEmailVerification();
-                                            Toast.makeText(RegisterActivity.this,"Check your email to verify your account",Toast.LENGTH_LONG).show();
+                                            Toast.makeText(RegisterActivity.this,"User has been registered successfully! Check your email to verify your account",Toast.LENGTH_LONG).show();
                                             progressBar.setVisibility((View.GONE));
                                         }
 
                                     }else{
-                                        Toast.makeText(RegisterActivity.this,"Failed to register! Try again",Toast.LENGTH_LONG).show();
+                                        Toast.makeText(RegisterActivity.this,"Failed to register!"+task.getException().getMessage(),Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility((View.GONE));
                                     }
                                 }
                             });
                         }else{
-                            Toast.makeText(RegisterActivity.this,"Failed to register! Try Again!",Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegisterActivity.this,"Failed to register!"+task.getException().getMessage(),Toast.LENGTH_LONG).show();
                             progressBar.setVisibility((View.GONE));
                         }
 

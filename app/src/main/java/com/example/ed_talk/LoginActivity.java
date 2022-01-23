@@ -19,9 +19,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView register,forgotPassword;
+    private TextView register,forgotPassword,resendVerificationMail;
     private EditText editTextUserEmail,editTextUserPassword;
     private Button logIn;
 
@@ -45,6 +46,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         editTextUserEmail=(EditText) findViewById(R.id.editTextEmail);
         editTextUserPassword=(EditText) findViewById(R.id.editTextPassword);
 
+        resendVerificationMail=(TextView) findViewById(R.id.resend_verificationMail);
+        resendVerificationMail.setOnClickListener(this);
+
         progressBar=(ProgressBar) findViewById(R.id.progressBar);
         mAuth=FirebaseAuth.getInstance();
 
@@ -65,7 +69,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.forgot_password:
                 startActivity(new Intent(this,ForgotPasswordActivity.class));
                 break;
+            case R.id.resend_verificationMail:
+                resendmail();
+                break;
+
+
         }
+
+    }
+    private void resendmail(){
+        progressBar.setVisibility(View.VISIBLE);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        user.sendEmailVerification();
+        Toast.makeText(LoginActivity.this,"Check your email to verify your account",Toast.LENGTH_LONG).show();
+        progressBar.setVisibility((View.GONE));
 
     }
 
@@ -100,11 +117,25 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 if(task.isSuccessful()) {
                     //redirect
                     //displaying success message temporarily
-                    Toast.makeText(LoginActivity.this,"Successfully logged in you FUCKIN' DICKHEAD",Toast.LENGTH_LONG).show();
-                    progressBar.setVisibility((View.GONE));
+
+                    FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+                    if(user.isEmailVerified()){
+                        //redirect-temporarily displayed toast message.
+                        Toast.makeText(LoginActivity.this,"Successfully logged in you FUCKIN' DICKHEAD",Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility((View.GONE));
+                        resendVerificationMail.setVisibility(View.GONE);
+
+                    }else{
+//                        user.sendEmailVerification();
+                        resendVerificationMail.setVisibility(View.VISIBLE);
+                        Toast.makeText(LoginActivity.this,"Email not verified! Verify your email and Try Again!",Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility((View.GONE));
+                    }
+
                 }else
                 {
-                    Toast.makeText(LoginActivity.this,"Failed to login! Please check your credentials.",Toast.LENGTH_LONG).show();
+                    //Toast.makeText(LoginActivity.this,"Failed to login! Please check your credentials.",Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this,"Failed to login!"+task.getException().getMessage(),Toast.LENGTH_LONG).show();
                     progressBar.setVisibility((View.GONE));
                 }
             }
