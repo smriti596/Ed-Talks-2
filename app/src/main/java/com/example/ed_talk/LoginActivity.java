@@ -72,8 +72,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.resend_verificationMail:
                 resendmail();
                 break;
-
-
         }
 
     }

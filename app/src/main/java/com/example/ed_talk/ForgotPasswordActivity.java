@@ -61,8 +61,6 @@ public class ForgotPasswordActivity extends AppCompatActivity implements View.On
 
         }
 
-
-
             private void resetPassword() {
                 String email = emailUserEditText.getText().toString().trim();
 
