@@ -13,4 +13,5 @@
     <dimen name="slide_desc">17dp</dimen>
     <dimen name="desc_padding">40dp</dimen>
     <dimen name="card_elevation">.5dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>
