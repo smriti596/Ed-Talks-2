@@ -17,17 +17,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ed_Talk">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/Theme.Ed_Talk.NoActionBar"></activity>
-        <activity
             android:name=".ForgotPasswordActivity"
             android:exported="false" />
         <activity android:name=".RegisterActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
         <activity android:name=".IntroSlider.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
