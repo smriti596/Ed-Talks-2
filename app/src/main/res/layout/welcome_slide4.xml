@@ -22,7 +22,9 @@
         android:background="@color/red"
         android:layout_marginTop="4dp"
         android:layout_below="@id/title"
-        android:layout_marginLeft="50dp"></RelativeLayout>
+        android:layout_marginLeft="50dp">
+
+    </RelativeLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/image"

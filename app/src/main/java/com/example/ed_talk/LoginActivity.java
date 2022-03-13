@@ -119,6 +119,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
                     if(user.isEmailVerified()){
                         //redirect-temporarily displayed toast message.
+                        startActivity(new Intent(LoginActivity.this,MainActivity.class));
+
                         Toast.makeText(LoginActivity.this,"Successfully logged-in",Toast.LENGTH_LONG).show();
                         progressBar.setVisibility((View.GONE));
                         resendVerificationMail.setVisibility(View.GONE);
