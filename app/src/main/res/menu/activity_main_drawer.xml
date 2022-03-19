@@ -6,15 +6,76 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_menu_home"
+            android:menuCategory="secondary"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_brochure"
+            android:icon="@drawable/ic_menu_brochure"
+            android:menuCategory="secondary"
+            android:title="Brochure" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_website"
+            android:icon="@drawable/ic_menu_website"
+            android:menuCategory="secondary"
+            android:title="Website" />
+        <item
+            android:id="@+id/nav_developer"
+            android:icon="@drawable/ic_menu_developer"
+            android:menuCategory="secondary"
+            android:title="Developer" />
     </group>
+
+    <item android:title="Personal"
+        android:menuCategory="secondary">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_gallery"
+                    android:icon="@drawable/ic_menu_my_articles"
+                    android:menuCategory="secondary"
+                    android:title="My Articles" />
+                <item
+                    android:id="@+id/nav_slideshow"
+                    android:icon="@drawable/ic_menu_companies"
+                    android:menuCategory="secondary"
+                    android:title="Companies" />
+                <item
+                    android:id="@+id/bookmarksFragment"
+                    android:icon="@drawable/ic_menu_bookmarks"
+                    android:menuCategory="secondary"
+                    android:title="Bookmarks" />
+                <item
+                    android:id="@+id/qnaFragment"
+                    android:icon="@drawable/ic_menu_qna"
+                    android:menuCategory="secondary"
+                    android:title="QnA" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:title="Communicate"
+        android:menuCategory="secondary">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:menuCategory="secondary"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_menu_feedback"
+                android:menuCategory="secondary"
+                android:title="Feedback" />
+            <item
+                android:id="@+id/nav_privacy"
+                android:icon="@drawable/ic_privacy_policy"
+                android:menuCategory="secondary"
+                android:title="Privacy Policy" />
+
+        </menu>
+
+    </item>
 </menu>
