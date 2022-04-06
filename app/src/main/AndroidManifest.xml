@@ -16,10 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ed_Talk">
+        <activity android:name=".AdminActivity"></activity>
         <activity
             android:name=".Activity.MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/Theme.Ed_Talk.NoActionBar"></activity>
+            android:theme="@style/Theme.Ed_Talk.NoActionBar" />
         <activity
             android:name=".ForgotPasswordActivity"
             android:exported="false" />
@@ -27,7 +28,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".IntroSlider.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,14 +36,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".AddInterviewExperience.AddInterviewExperienceActivity" />
         <activity android:name=".AddInterviewExperience.UploadImage" />
         <activity android:name=".ViewInterviewExperiences.UserProfileActivity" />
         <activity android:name=".ViewInterviewExperiences.InterviewExperienceActivity" />
-
-
-
     </application>
 
 </manifest>

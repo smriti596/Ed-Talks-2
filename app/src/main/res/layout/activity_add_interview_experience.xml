@@ -41,6 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                android:textColor="@color/black"
                 android:text="If you study at Bansthali Vidyapith and have got placement/Internship offer, Please spare few minutes of your schedule to share your honest interview experience!"/>
 
             <!--Name-->
@@ -51,12 +52,14 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
+
                 app:cardElevation="@dimen/card_elevation"
                 app:cardCornerRadius="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+
                     android:orientation="vertical">
 
                     <TextView
@@ -77,6 +80,9 @@
                         android:layout_width="match_parent"
                         android:hint="Your Full Name"
                         android:padding="4dp"
+                        android:backgroundTint="@color/black"
+                        android:textColorHint="#70000000"
+                        android:textColor="@color/black"
                         android:maxLines="1"
                         android:inputType="text|textCapWords"
                         android:textCursorDrawable="@null"
@@ -91,6 +97,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
+
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="2dp"
@@ -100,6 +107,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -113,7 +121,8 @@
 
                     <Spinner
                         android:id="@+id/branch"
-                        style="@android:style/Widget.Holo.Light.Spinner"
+
+                        style="spi"
                         android:layout_width="170dp"
                         android:layout_height="35dp"
                         android:layout_marginLeft="12dp"
@@ -122,7 +131,9 @@
                         android:layout_weight="1"
                         android:background="@drawable/spinner_background"
                         android:dropDownVerticalOffset="-53dp"
-                        android:spinnerMode="dialog"></Spinner>
+                        android:spinnerMode="dialog">
+
+                    </Spinner>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -130,7 +141,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:layout_marginTop="10dp"
+               android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
@@ -139,6 +150,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -158,6 +170,9 @@
                         android:padding="4dp"
                         android:maxLines="1"
                         android:inputType="phone"
+                        android:backgroundTint="@color/black"
+                        android:textColorHint="#70000000"
+                        android:textColor="@color/black"
                         android:textCursorDrawable="@null"
                         android:layout_marginLeft="12dp"
                         android:layout_marginBottom="15dp"
@@ -171,6 +186,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
+
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="2dp"
@@ -197,6 +213,9 @@
                         android:hint="Your LinkedIn Id"
                         android:padding="4dp"
                         android:maxLines="1"
+                        android:backgroundTint="@color/black"
+                        android:textColorHint="#70000000"
+                        android:textColor="@color/black"
                         android:inputType="textUri"
                         android:textCursorDrawable="@null"
                         android:layout_marginLeft="12dp"
@@ -240,6 +259,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:text="No"></TextView>
                         <Switch
                             android:id="@+id/isInternshipReview"
@@ -257,6 +277,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:text="Yes"></TextView>
                     </LinearLayout>
 
@@ -267,7 +288,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:layout_marginTop="10dp"
+                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
@@ -293,6 +314,9 @@
                         android:padding="4dp"
                         android:inputType="text|textCapWords"
                         android:maxLines="1"
+                        android:backgroundTint="@color/black"
+                        android:textColorHint="#70000000"
+                        android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
                         android:textCursorDrawable="@null"
@@ -315,6 +339,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -330,6 +355,9 @@
                         android:id="@+id/jobTitle"
                         android:hint="Job Title"
                         android:padding="4dp"
+                        android:backgroundTint="@color/black"
+                        android:textColorHint="#70000000"
+                        android:textColor="@color/black"
                         android:inputType="text|textCapWords"
                         android:maxLines="1"
                         android:layout_width="match_parent"
@@ -354,6 +382,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -369,6 +398,9 @@
                         android:id="@+id/internCompany"
                         android:hint="Name of Company Interned at"
                         android:padding="4dp"
+                        android:backgroundTint="@color/black"
+                        android:textColorHint="#70000000"
+                        android:textColor="@color/black"
                         android:inputType="text|textCapWords"
                         android:maxLines="1"
                         android:layout_width="match_parent"
@@ -393,6 +425,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -446,6 +479,9 @@
                         android:layout_height="wrap_content"
                         android:hint="Project Description"
                         android:padding="10dp"
+                        android:backgroundTint="@color/black"
+                        android:textColorHint="#70000000"
+                        android:textColor="@color/black"
                         android:inputType="textMultiLine"
                         android:layout_gravity="center_horizontal"
                         android:maxLines="13"
@@ -491,6 +527,9 @@
                         android:layout_height="wrap_content"
                         android:hint="Online Round Experience"
                         android:padding="10dp"
+                        android:backgroundTint="@color/black"
+                        android:textColorHint="#70000000"
+                        android:textColor="@color/black"
                         android:inputType="textMultiLine"
                         android:layout_gravity="center_horizontal"
                         android:maxLines="15"
@@ -535,6 +574,9 @@
                         android:layout_height="wrap_content"
                         android:hint="Technical Round Experience"
                         android:padding="10dp"
+                        android:backgroundTint="@color/black"
+                        android:textColorHint="#70000000"
+                        android:textColor="@color/black"
                         android:inputType="textMultiLine"
                         android:layout_gravity="center_horizontal"
                         android:maxLines="15"
@@ -579,6 +621,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="HR Round Experience"
+                        android:backgroundTint="@color/black"
+                        android:textColorHint="#70000000"
+                        android:textColor="@color/black"
                         android:padding="10dp"
                         android:inputType="textMultiLine"
                         android:layout_gravity="center_horizontal"
@@ -629,7 +674,9 @@
                         android:layout_weight="1"
                         style="@android:style/Widget.Holo.Light.Spinner"
                         android:dropDownVerticalOffset="-53dp"
-                        android:spinnerMode="dialog"></Spinner>
+                        android:spinnerMode="dialog">
+
+                    </Spinner>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -705,6 +752,9 @@
                         android:layout_height="wrap_content"
                         android:hint="Any Tips?"
                         android:padding="10dp"
+                        android:backgroundTint="@color/black"
+                        android:textColorHint="#70000000"
+                        android:textColor="@color/black"
                         android:inputType="textMultiLine"
                         android:layout_gravity="center_horizontal"
                         android:maxLines="15"
