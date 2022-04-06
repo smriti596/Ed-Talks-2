@@ -17,6 +17,7 @@
     <color name="whiteTextColor">#fff</color>
     <color name="primaryTextColor">#11CFC5</color>
     <color name="red">#D32F2F</color>
+    <color name="green">#4CAF50</color>
 
     <color name="colorGradientStart">#1794CC</color>
     <color name="colorGradientCenter">#17589E</color>
