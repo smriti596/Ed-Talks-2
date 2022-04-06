@@ -2,6 +2,7 @@ package com.example.ed_talk;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ed_talk.Utils.SharedPrefManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -29,11 +31,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
+    private SharedPreferences mSharedPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
+
 
         //finding textview clicking on which we are redirected to register page from login page.
         register=(TextView) findViewById(R.id.textview_register);
@@ -119,8 +126,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
                     if(user.isEmailVerified()){
                         //redirect-temporarily displayed toast message.
-                        startActivity(new Intent(LoginActivity.this,MainActivity.class));
 
+                        startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                        SharedPrefManager sm = new SharedPrefManager(LoginActivity.this);
+                        sm.setIsLoggedIn(true);
                         Toast.makeText(LoginActivity.this,"Successfully logged-in",Toast.LENGTH_LONG).show();
                         progressBar.setVisibility((View.GONE));
                         resendVerificationMail.setVisibility(View.GONE);
