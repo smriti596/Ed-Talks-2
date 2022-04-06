@@ -90,7 +90,7 @@ public class InterviewExperienceActivity extends Activity {
             }
         });
 
-/*
+
         // Search activity
         searchIcon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,7 +98,7 @@ public class InterviewExperienceActivity extends Activity {
                 startActivity(new Intent(InterviewExperienceActivity.this, SearchActivity.class));
             }
         });
-        */
+
     }
 
 }

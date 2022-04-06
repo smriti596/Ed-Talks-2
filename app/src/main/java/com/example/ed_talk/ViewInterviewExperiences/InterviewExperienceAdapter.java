@@ -50,13 +50,14 @@ class InterviewExperienceAdapter extends RecyclerView.Adapter<InterviewExperienc
         interviewExperienceViewHolder.mStudName.setText(interviewExperience.getStudName());
         interviewExperienceViewHolder.mStudCompany.setText(interviewExperience.getCompanyName());
 
+  /*
         Glide.with(myContext)
                 .load(interviewExperience.getPhotoUrl())
                 .apply(new RequestOptions()
                         .placeholder(R.drawable.user_avtar)
                         .fitCenter())
                 .into(interviewExperienceViewHolder.mStudPic);
-
+*/
         interviewExperienceViewHolder.mCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,14 +78,14 @@ class InterviewExperienceAdapter extends RecyclerView.Adapter<InterviewExperienc
 
     public static class InterviewExperienceViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView mStudPic;
+       // ImageView mStudPic;
         TextView mStudName,mStudCompany;
         CardView mCardView;
 
 
         public InterviewExperienceViewHolder(@NonNull final View itemView) {
             super(itemView);
-            mStudPic = itemView.findViewById(R.id.photoImageView);
+         //   mStudPic = itemView.findViewById(R.id.photoImageView);
             mStudName = itemView.findViewById(R.id.nameTextView);
             mStudCompany = itemView.findViewById(R.id.studCompanyName);
             mCardView = itemView.findViewById(R.id.cardView);

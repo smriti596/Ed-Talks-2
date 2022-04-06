@@ -34,7 +34,7 @@ import com.example.ed_talk.R;
 
 public class AddInterviewExperienceActivity extends Activity implements  AdapterView.OnItemSelectedListener{
 
-    String[] branches = {"CHOOSE","CSE", "ECE", "Mechanical", "Electrical", "Civil","Metallurgy","Production","MCA","M.Tech"};
+    String[] branches = {"CHOOSE","CSE", "ECE", "Electrical", "Civil","Metallurgy","Production","MCA","M.Tech"};
     String[] difficulty={"CHOOSE","Very Easy","Easy","Average","Difficult","Very Difficult"};
     String[] interviewMode ={"CHOOSE","College","Applied Online","Referral"};
 

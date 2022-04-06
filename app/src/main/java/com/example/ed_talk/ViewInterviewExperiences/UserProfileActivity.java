@@ -34,7 +34,7 @@ public class UserProfileActivity extends Activity {
             }
         });
 
-        mImageView=(ImageView)findViewById(R.id.photoUrl);
+        //mImageView=(ImageView)findViewById(R.id.photoUrl);
         mStudName=(TextView)findViewById(R.id.studName);
         mStudentLinkedIn=(Button) findViewById(R.id.linkedInId);
         mStudentPhone=(Button) findViewById(R.id.phoneNum);
@@ -53,6 +53,7 @@ public class UserProfileActivity extends Activity {
 
         InterviewExperience interviewExperience = (InterviewExperience)getIntent().getSerializableExtra("StudentDetails");
 
+        /*
         Glide.with(getApplicationContext())
                 .load(interviewExperience.getPhotoUrl())
                 .apply(new RequestOptions()
@@ -60,6 +61,8 @@ public class UserProfileActivity extends Activity {
                         .centerCrop()
                         .fitCenter())
                 .into(mImageView);
+
+        */
         mStudName.setText(interviewExperience.getStudName());
         mStudentLinkedIn.setText(interviewExperience.getLinkedInId());
         mStudentPhone.setText(interviewExperience.getWhatsappNum());

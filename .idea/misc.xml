@@ -11,6 +11,8 @@
         <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/layout/fragment_share.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/menu/activity_main_drawer.xml" value="0.4" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/menu/main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/drawable-v24/cursor_drawable.xml" value="0.2703125" />
+        <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/drawable-v24/ic_mic_black_24dp.xml" value="0.2703125" />
         <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/drawable/button_background.xml" value="0.2703125" />
         <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/drawable/ic_arrow_back.xml" value="0.2703125" />
         <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.28229166666666666" />
@@ -18,9 +20,13 @@
         <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/drawable/my_button_bg.xml" value="0.2703125" />
         <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/drawable/spinner_background.xml" value="0.2703125" />
         <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/layout/activity_inerview_experience.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/layout/activity_interview_experience.xml" value="0.25271739130434784" />
+        <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/layout/activity_search.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/layout/activity_upload_image.xml" value="0.2" />
         <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/layout/activity_user_profile.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/layout/card_interview_experience.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/layout/cursor_drawable.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/layout/fragment_feedback.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/layout/interview_exp_success_dialog.xml" value="0.1933876811594203" />
       </map>
     </option>

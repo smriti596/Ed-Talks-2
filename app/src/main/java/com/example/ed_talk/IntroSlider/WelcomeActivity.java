@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.ed_talk.LoginActivity;
+import com.example.ed_talk.SignIn.LoginActivity;
 import com.example.ed_talk.R;
 
 import androidx.viewpager.widget.PagerAdapter;

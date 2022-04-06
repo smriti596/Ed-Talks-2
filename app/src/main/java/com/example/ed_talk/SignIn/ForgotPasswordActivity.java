@@ -1,4 +1,4 @@
-package com.example.ed_talk;
+package com.example.ed_talk.SignIn;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.ed_talk.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -55,7 +56,7 @@ public class ForgotPasswordActivity extends AppCompatActivity implements View.On
                      resetPassword();
                      break;
                  case R.id.textview_logIn:
-                     startActivity(new Intent(this,LoginActivity.class));
+                     startActivity(new Intent(this, LoginActivity.class));
                      break;
              }
 

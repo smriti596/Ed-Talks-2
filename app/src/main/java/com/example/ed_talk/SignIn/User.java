@@ -1,4 +1,4 @@
-package com.example.ed_talk;
+package com.example.ed_talk.SignIn;
 
 public class User {
     public String fullName,age,email;

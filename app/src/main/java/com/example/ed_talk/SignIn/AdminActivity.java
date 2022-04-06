@@ -1,8 +1,10 @@
-package com.example.ed_talk;
+package com.example.ed_talk.SignIn;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.ed_talk.R;
 
 public class AdminActivity extends AppCompatActivity {
 

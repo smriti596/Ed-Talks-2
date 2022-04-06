@@ -198,6 +198,7 @@ public class HomeFragment extends Fragment {
 
     }
 
+    /*
     // Fade in fade out animation of carousel
     public class FadeOutTransformation implements ViewPager.PageTransformer{
         @Override
@@ -227,4 +228,5 @@ public class HomeFragment extends Fragment {
                 return;
         }
     }
+    */
 }
