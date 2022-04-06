@@ -147,9 +147,9 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
                 // Upload the data to the firebase
                 if(flag==1) {
                     if (isInternshipReview == true)
-                        mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("experience").child("Internship");
+                        mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Internship");
                     else
-                        mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("experience").child("Placement");
+                        mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Placement");
 
                     String childKey = mMessagesDatabaseReference.push().getKey();
 

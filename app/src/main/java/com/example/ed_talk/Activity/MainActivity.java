@@ -1,4 +1,4 @@
-package com.example.ed_talk;
+package com.example.ed_talk.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.ed_talk.R;
 import com.example.ed_talk.Utils.SharedPrefManager;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
