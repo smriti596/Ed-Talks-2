@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     View mHeaderView;
     private FirebaseAuth mAuth;
-    TextView mUserName,mUserEmail;
+    TextView mUserName, mUserEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,30 +42,28 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.appBarMain.toolbar);
 
-       drawer = binding.drawerLayout;
-      navigationView = binding.navView;
+        drawer = binding.drawerLayout;
+        navigationView = binding.navView;
 
 
-
-       // else {
-       //     startActivity(new Intent(MainActivity.this, LoginActivity.class));
+        // else {
+        //     startActivity(new Intent(MainActivity.this, LoginActivity.class));
         //    finish();
-       // }
-
+        // }
 
 
         // Passing each menu ID as a set of Ids because each
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home,R.id.brochureFragment,R.id.websiteFragment,R.id.developerFragment,R.id.nav_gallery, R.id.nav_slideshow,R.id.bookmarksFragment,R.id.qnaFragment)
+                R.id.nav_home, R.id.brochureFragment, R.id.websiteFragment, R.id.developerFragment, R.id.nav_gallery, R.id.nav_slideshow, R.id.bookmarksFragment, R.id.qnaFragment)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-        SharedPrefManager sharedPrefManager=new SharedPrefManager(this);
-        if(sharedPrefManager.isLoggedIn()){
+        SharedPrefManager sharedPrefManager = new SharedPrefManager(this);
+        if (sharedPrefManager.isLoggedIn()) {
             updateSideNavHeader();
         }
     }
@@ -84,9 +82,9 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    public void updateSideNavHeader(){
+    public void updateSideNavHeader() {
         NavigationView mNavigationView = (NavigationView) findViewById(R.id.nav_view);
-        mHeaderView =  mNavigationView.getHeaderView(0);
+        mHeaderView = mNavigationView.getHeaderView(0);
 
         mAuth = FirebaseAuth.getInstance();
 
