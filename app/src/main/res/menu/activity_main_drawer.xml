@@ -13,17 +13,20 @@
             android:id="@+id/nav_brochure"
             android:icon="@drawable/ic_menu_brochure"
             android:menuCategory="secondary"
-            android:title="Brochure" />
+            android:title="Brochure"
+            android:onClick="placementBrochure"/>
         <item
             android:id="@+id/nav_website"
             android:icon="@drawable/ic_menu_website"
             android:menuCategory="secondary"
-            android:title="Website" />
+            android:title="Website"
+            android:onClick="openWebsite"/>
         <item
             android:id="@+id/nav_developer"
             android:icon="@drawable/ic_menu_developer"
             android:menuCategory="secondary"
-            android:title="Developer" />
+            android:title="Developer"
+            android:onClick="openDevActivity"/>
     </group>
 
     <item android:title="Personal"
