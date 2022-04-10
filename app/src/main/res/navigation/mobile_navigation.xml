@@ -32,34 +32,5 @@
         android:name="com.example.ed_talk.Fragments.qnaFragment"
         android:label="QnA"
         tools:layout="@layout/fragment_qna" />
-    <fragment
-        android:id="@+id/brochureFragment"
-        android:name="com.example.ed_talk.Fragments.BrochureFragment"
-        android:label="fragment_brochure"
-        tools:layout="@layout/fragment_brochure" />
-    <fragment
-        android:id="@+id/developerFragment"
-        android:name="com.example.ed_talk.Fragments.DeveloperFragment"
-        android:label="fragment_developer"
-        tools:layout="@layout/fragment_developer" />
-    <fragment
-        android:id="@+id/feedbackFragment"
-        android:name="com.example.ed_talk.Fragments.FeedbackFragment"
-        android:label="fragment_feedback"
-        tools:layout="@layout/fragment_feedback" />
-    <fragment
-        android:id="@+id/privacyFragment"
-        android:name="com.example.ed_talk.Fragments.PrivacyFragment"
-        android:label="fragment_privacy"
-        tools:layout="@layout/fragment_privacy" />
-    <fragment
-        android:id="@+id/shareFragment"
-        android:name="com.example.ed_talk.Fragments.ShareFragment"
-        android:label="fragment_share"
-        tools:layout="@layout/fragment_share" />
-    <fragment
-        android:id="@+id/websiteFragment"
-        android:name="com.example.ed_talk.Fragments.WebsiteFragment"
-        android:label="fragment_website"
-        tools:layout="@layout/fragment_website" />
+
 </navigation>

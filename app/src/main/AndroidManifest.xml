@@ -16,13 +16,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ed_Talk">
-
+        android:usesCleartextTraffic="true">
         <activity android:name=".AddInterviewExperience.AddInterviewExperienceActivity" />
         <activity android:name=".AddInterviewExperience.UploadImage" />
         <activity android:name=".ViewInterviewExperiences.UserProfileActivity" />
         <activity android:name=".ViewInterviewExperiences.InterviewExperienceActivity" />
         <activity android:name=".ViewInterviewExperiences.SearchActivity"/>
         <activity android:name=".SignIn.AdminActivity"/>
+        <activity android:name=".Activity.DeveloperActivity" />
 
         <activity
             android:name=".Activity.MainActivity"

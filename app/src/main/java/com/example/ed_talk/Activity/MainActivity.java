@@ -1,7 +1,9 @@
 package com.example.ed_talk.Activity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.ImageView;
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.brochureFragment, R.id.websiteFragment, R.id.developerFragment, R.id.nav_gallery, R.id.nav_slideshow, R.id.bookmarksFragment, R.id.qnaFragment)
+                R.id.nav_home,R.id.nav_gallery, R.id.nav_slideshow, R.id.bookmarksFragment, R.id.qnaFragment)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -103,5 +105,18 @@ public class MainActivity extends AppCompatActivity {
                         .placeholder(R.mipmap.ic_launcher)
                         .fitCenter())
                 .into(mUserImage);*/
+    }
+    public void openDevActivity(MenuItem item) {
+        drawer.closeDrawers();
+        Intent intent = new Intent(getApplicationContext(), DeveloperActivity.class);
+        startActivity(intent);
+    }
+    public void openWebsite(MenuItem item) {
+        drawer.closeDrawers();
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.banasthali.org/banasthali/wcms/en/home/")));
+    }
+    public void placementBrochure(MenuItem item) {
+        drawer.closeDrawers();
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.banasthali.org/banasthali/admissions/brochures/banasthali_text_broucher.pdf")));
     }
 }
