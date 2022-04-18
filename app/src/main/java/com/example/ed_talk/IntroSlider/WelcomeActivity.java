@@ -16,8 +16,10 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.ed_talk.Activity.MainActivity;
 import com.example.ed_talk.SignIn.LoginActivity;
 import com.example.ed_talk.R;
+import com.example.ed_talk.Utils.SharedPrefManager;
 
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -41,9 +43,22 @@ public class WelcomeActivity extends Activity {
         // Checking for first time launch - before calling setContentView()
         prefManager = new PrefManager(this);
         if (!prefManager.isFirstTimeLaunch()) {
-            launchHomeScreen();
+
+            SharedPrefManager sharedPrefManager=new SharedPrefManager(this);
+
+            if(sharedPrefManager.isLoggedIn()){
+                startActivity(new Intent(this, MainActivity.class));
+                finish();
+            }
+            else {
+                launchHomeScreen();
+              //  startActivity(new Intent(this, LoginActivity.class));
+                finish();
+            }
+
             finish();
         }
+
 
         setContentView(R.layout.activity_welcome);
 

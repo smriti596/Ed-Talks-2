@@ -57,6 +57,8 @@
         android:layout_height="wrap_content"
         android:background="#ffffff"
         android:id="@+id/recycler_view"
-        ></androidx.recyclerview.widget.RecyclerView>
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>
