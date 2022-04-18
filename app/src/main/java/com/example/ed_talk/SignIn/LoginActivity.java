@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
 
+        SharedPrefManager sharedPrefManager = new SharedPrefManager(this);
 
         //finding textview clicking on which we are redirected to register page from login page.
         register=(TextView) findViewById(R.id.textview_register);
@@ -133,11 +134,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         //redirect-temporarily displayed toast message.
 
                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
+
                         SharedPrefManager sm = new SharedPrefManager(LoginActivity.this);
                         sm.setIsLoggedIn(true);
                         Toast.makeText(LoginActivity.this,"Successfully logged-in",Toast.LENGTH_LONG).show();
                         progressBar.setVisibility((View.GONE));
                         resendVerificationMail.setVisibility(View.GONE);
+                        finish();
+
 
                     }else{
 //                        user.sendEmailVerification();

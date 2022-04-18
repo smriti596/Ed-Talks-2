@@ -81,4 +81,12 @@
         </menu>
 
     </item>
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/power"
+        android:menuCategory="secondary"
+    android:title="Log-Out"
+        android:onClick="logout"
+    />
+
 </menu>
