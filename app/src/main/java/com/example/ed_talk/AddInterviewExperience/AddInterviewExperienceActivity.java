@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,8 @@ import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -48,9 +51,13 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
     private DatabaseReference mMessagesDatabaseReference;
     String branchRes,diffRes,modeRes;
     boolean isInternshipReview;
+    String mEmail="";
+    FirebaseAuth mAuth;
 
     String imageUrlIfProfileNotUploaded = "";
     StorageReference storageReference;
+
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +83,12 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
         mSendButton = (Button) findViewById(R.id.sendButton);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            mEmail = user.getEmail();
+        }
+
+
 
         mPhotoPickerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,7 +117,7 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
             @Override
             public void onClick(View view) {
                 String name,whatsappNum,linkedInId,company,jobTitle,internCompany,photoUrl;
-                String projectDesc,onlinRound,techRound,hrRound,wordsToJr;
+                String projectDesc,onlinRound,techRound,hrRound,wordsToJr,Email;
 
                 name=mStudName.getText().toString();
                 whatsappNum=mWhatsappNum.getText().toString();
@@ -120,7 +133,7 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
                 wordsToJr=mWordsToJr.getText().toString();
 
                 imageUrlIfProfileNotUploaded = photoUrl;
-
+                Email=mEmail;
                 // Validate all the required inputs
                 int flag = 0;
                 if(name.length()==0)
@@ -155,7 +168,7 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
 
                     InterviewExperience interviewExperience = new InterviewExperience(mCnfStatus, name, branchRes, whatsappNum, linkedInId,
                             isInternshipReview, company, jobTitle, internCompany,photoUrl, projectDesc,
-                            onlinRound, techRound, hrRound, modeRes, diffRes, wordsToJr, childKey);
+                            onlinRound, techRound, hrRound, modeRes, diffRes, wordsToJr, childKey, mEmail);
 
                     mMessagesDatabaseReference.child(childKey).setValue(interviewExperience);
 

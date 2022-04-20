@@ -1,4 +1,4 @@
-package com.example.ed_talk.ui.gallery;
+package com.example.ed_talk.ui.MyArticlesFragment;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

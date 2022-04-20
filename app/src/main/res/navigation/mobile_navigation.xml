@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.ed_talk.ui.gallery.GalleryFragment"
+        android:name="com.example.ed_talk.ui.MyArticlesFragment.MyArticlesFragment"
         android:label="My Articles"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_myarticles" />
 
     <fragment
         android:id="@+id/nav_slideshow"
