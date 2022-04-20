@@ -77,6 +77,7 @@ public class MyArticlesFragment extends Fragment {
 
 
 
+        // VIEWING MY ARTICLES
 
         mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Internship");
         recyclerView = (RecyclerView) root.findViewById(R.id.recycler_view);
