@@ -40,6 +40,8 @@
     <string-array name="topics">
         <item>Internship</item>
         <item>Placement</item>
+        <item>Others</item>
     </string-array>
+    <string name="title_activity_qna_home">QNA_home</string>
 
 </resources>

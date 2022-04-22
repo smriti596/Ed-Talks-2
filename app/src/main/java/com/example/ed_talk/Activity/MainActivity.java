@@ -7,15 +7,14 @@ import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.ed_talk.QNA.QNA_Activity;
+import com.example.ed_talk.QNA.QNA_homeActivity;
 import com.example.ed_talk.R;
 import com.example.ed_talk.SignIn.LoginActivity;
 import com.example.ed_talk.Utils.SharedPrefManager;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -24,7 +23,6 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import com.example.ed_talk.databinding.ActivityMainBinding;
 import com.google.firebase.auth.FirebaseAuth;
@@ -127,6 +125,16 @@ public class MainActivity extends AppCompatActivity {
                         .placeholder(R.mipmap.ic_launcher)
                         .fitCenter())
                 .into(mUserImage);*/
+    }
+    public void QuestionAnswerpage(MenuItem item) {
+        drawer.closeDrawers();
+        Intent intent = new Intent(getApplicationContext(), QNA_homeActivity.class);
+        startActivity(intent);
+    }
+    public void AskQuestion(MenuItem item) {
+        drawer.closeDrawers();
+        Intent intent = new Intent(getApplicationContext(), QNA_Activity.class);
+        startActivity(intent);
     }
     public void openDevActivity(MenuItem item) {
         drawer.closeDrawers();

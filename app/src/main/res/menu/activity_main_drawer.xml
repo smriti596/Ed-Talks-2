@@ -50,10 +50,17 @@
                     android:menuCategory="secondary"
                     android:title="Bookmarks" />
                 <item
-                    android:id="@+id/qnaFragment"
+                    android:id="@+id/qna_"
                     android:icon="@drawable/ic_menu_qna"
                     android:menuCategory="secondary"
-                    android:title="QnA" />
+                    android:title="QNA_posts"
+                    android:onClick="QuestionAnswerpage"/>
+                <item
+                    android:id="@+id/qna"
+                    android:icon="@drawable/ic_menu_qna"
+                    android:menuCategory="secondary"
+                    android:title="Ask question"
+                    android:onClick="AskQuestion"/>
             </group>
         </menu>
     </item>

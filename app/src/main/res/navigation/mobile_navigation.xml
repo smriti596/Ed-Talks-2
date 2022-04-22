@@ -29,8 +29,8 @@
         tools:layout="@layout/fragment_bookmarks" />
     <fragment
         android:id="@+id/qnaFragment"
-        android:name="com.example.ed_talk.Fragments.qnaFragment"
+        android:name="com.example.ed_talk.QNA.QNA_homeActivity"
         android:label="QnA"
-        tools:layout="@layout/fragment_qna" />
+        tools:layout="@layout/activity_qna_home" />
 
 </navigation>
