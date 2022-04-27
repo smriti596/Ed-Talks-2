@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/layout/activity_developer.xml" value="0.264" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/layout/card_interview_experience.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/layout/card_my_experience.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/layout/fragment_bookmarks.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/layout/fragment_feedback.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
@@ -11,6 +13,7 @@
         <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/layout/fragment_privacy.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/layout/fragment_qna.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/layout/fragment_share.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/layout/question_card_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/menu/activity_main_drawer.xml" value="0.4" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Ed-Talks-2/app/src/main/res/menu/main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/drawable-v24/cursor_drawable.xml" value="0.2703125" />
@@ -34,7 +37,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
