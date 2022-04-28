@@ -91,7 +91,7 @@ public class MyArticlesFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
 
-        final InterviewExperienceAdapter adapter = new InterviewExperienceAdapter(getContext(), interviewExperienceList);
+        final my_Articles_adapter adapter = new my_Articles_adapter(getContext(), interviewExperienceList);
         recyclerView.setAdapter(adapter);
 
         mMessagesDatabaseReference.addValueEventListener(new ValueEventListener() {
@@ -102,7 +102,7 @@ public class MyArticlesFragment extends Fragment {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     InterviewExperience interviewExperience = dataSnapshot.getValue(InterviewExperience.class);
 //                    if (interviewExperience.getCnfStatus()==1)
-                    if (interviewExperience.getEmail().equals(mEmail) && interviewExperience.getEmail() != null && mEmail != null)
+                    if (interviewExperience.getCnfStatus()==1 && interviewExperience.getEmail().equals(mEmail) && interviewExperience.getEmail() != null && mEmail != null)
                         interviewExperienceList.add(interviewExperience);
                 }
                 adapter.notifyDataSetChanged();
@@ -127,7 +127,7 @@ public class MyArticlesFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
 
-        final InterviewExperienceAdapter aadapter = new InterviewExperienceAdapter(getContext(), interviewExperienceList);
+        final my_Articles_adapter aadapter = new my_Articles_adapter(getContext(), interviewExperienceList);
         recyclerView.setAdapter(aadapter);
 
         mMessagesDatabaseReference.addValueEventListener(new ValueEventListener() {
@@ -137,9 +137,10 @@ public class MyArticlesFragment extends Fragment {
                 interviewExperienceList.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     InterviewExperience interviewExperience = dataSnapshot.getValue(InterviewExperience.class);
-//                    if (interviewExperience.getCnfStatus()==1)
-                    if (interviewExperience.getEmail().equals(mEmail) && interviewExperience.getEmail() != null && mEmail != null)
+
+                    if (interviewExperience.getCnfStatus()==1 && interviewExperience.getEmail().equals(mEmail) && interviewExperience.getEmail() != null && mEmail != null)
                         interviewExperienceList.add(interviewExperience);
+
                 }
                 adapter.notifyDataSetChanged();
             }
