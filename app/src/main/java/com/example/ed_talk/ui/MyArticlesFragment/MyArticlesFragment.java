@@ -137,9 +137,10 @@ public class MyArticlesFragment extends Fragment {
                 interviewExperienceList.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     InterviewExperience interviewExperience = dataSnapshot.getValue(InterviewExperience.class);
-//                    if (interviewExperience.getCnfStatus()==1)
-                    if (interviewExperience.getEmail().equals(mEmail) && interviewExperience.getEmail() != null && mEmail != null)
+
+                    if (interviewExperience.getCnfStatus()==1 && interviewExperience.getEmail().equals(mEmail) && interviewExperience.getEmail() != null && mEmail != null)
                         interviewExperienceList.add(interviewExperience);
+
                 }
                 adapter.notifyDataSetChanged();
             }

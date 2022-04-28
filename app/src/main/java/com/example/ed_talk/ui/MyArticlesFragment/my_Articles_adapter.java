@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -39,8 +40,7 @@ public class my_Articles_adapter extends RecyclerView.Adapter<my_Articles_adapte
     public my_Articles_adapter(Context myContext, List<InterviewExperience> placementList){
         this.myContext = myContext;
         this.placementList = placementList;
-
-        auth=FirebaseAuth.getInstance();
+         auth=FirebaseAuth.getInstance();
         mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Placement");
     }
 
@@ -58,6 +58,8 @@ public class my_Articles_adapter extends RecyclerView.Adapter<my_Articles_adapte
 
     @Override
     public void onBindViewHolder(@NonNull final InterviewExperienceViewHolder interviewExperienceViewHolder, final int position) {
+
+
         final InterviewExperience interviewExperience = placementList.get(position);
 
         interviewExperienceViewHolder.mStudName.setText(interviewExperience.getStudName());
@@ -67,6 +69,9 @@ public class my_Articles_adapter extends RecyclerView.Adapter<my_Articles_adapte
             @Override
             public void onClick(View view) {
                 deletePost(interviewExperience.getChildKey());
+//                notifyItemRemoved(interviewExperienceViewHolder.getAdapterPosition());
+//                notifyItemRangeChanged(interviewExperienceViewHolder.getAdapterPosition(), getItemCount());
+
 
             }
         });
@@ -104,7 +109,9 @@ public class my_Articles_adapter extends RecyclerView.Adapter<my_Articles_adapte
                         .child(childKey);
 
                 curr_add.removeValue();
-
+                Toast.makeText(myContext, "Post deleted",
+                        Toast.LENGTH_SHORT).show();
+                notifyDataSetChanged();
             }
         });
 
