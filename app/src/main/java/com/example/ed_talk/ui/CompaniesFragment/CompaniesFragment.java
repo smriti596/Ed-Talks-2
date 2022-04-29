@@ -1,4 +1,4 @@
-package com.example.ed_talk.ui.slideshow;
+package com.example.ed_talk.ui.CompaniesFragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,20 +12,20 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.ed_talk.R;
-import com.example.ed_talk.databinding.FragmentSlideshowBinding;
+import com.example.ed_talk.databinding.FragmentCompaniesBinding;
 
-public class SlideshowFragment extends Fragment {
+
+public class CompaniesFragment extends Fragment {
 
     private SlideshowViewModel slideshowViewModel;
-    private FragmentSlideshowBinding binding;
+    private FragmentCompaniesBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         slideshowViewModel =
                 new ViewModelProvider(this).get(SlideshowViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentCompaniesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textSlideshow;

@@ -21,10 +21,11 @@ public class InterviewExperience implements Serializable {
     private String interviewDifficulty;
     private String wordsToJr;
     private String childKey;
+    private String email;
 
     public InterviewExperience() {}
 
-    public InterviewExperience(int cnfStatus, String studName, String branch, String whatsappNum, String linkedInId, boolean isInternshipReview, String companyName, String jobTitle, String internCompany, String photoUrl, String projectDesc, String onlineRound, String techRound, String hrRound, String interviewMode, String interviewDifficulty, String wordsToJr, String childKey) {
+    public InterviewExperience(int cnfStatus, String studName, String branch, String whatsappNum, String linkedInId, boolean isInternshipReview, String companyName, String jobTitle, String internCompany, String photoUrl, String projectDesc, String onlineRound, String techRound, String hrRound, String interviewMode, String interviewDifficulty, String wordsToJr, String childKey, String email) {
         this.cnfStatus = cnfStatus;
         this.studName = studName;
         this.branch = branch;
@@ -43,6 +44,7 @@ public class InterviewExperience implements Serializable {
         this.interviewDifficulty = interviewDifficulty;
         this.wordsToJr = wordsToJr;
         this.childKey = childKey;
+        this.email=email;
     }
 
     public int getCnfStatus() {
@@ -187,5 +189,13 @@ public class InterviewExperience implements Serializable {
 
     public void setChildKey(String childKey) {
         this.childKey = childKey;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

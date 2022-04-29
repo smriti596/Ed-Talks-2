@@ -23,6 +23,7 @@
         <activity android:name=".ViewInterviewExperiences.InterviewExperienceActivity" />
         <activity android:name=".ViewInterviewExperiences.SearchActivity"/>
         <activity android:name=".SignIn.AdminActivity"/>
+        <activity android:name=".ui.MyArticlesFragment.viewMyArticlesActivity" />
         <activity android:name=".Activity.DeveloperActivity" />
 
         <activity

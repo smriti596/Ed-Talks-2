@@ -1,4 +1,4 @@
-package com.example.ed_talk.ui.slideshow;
+package com.example.ed_talk.ui.CompaniesFragment;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

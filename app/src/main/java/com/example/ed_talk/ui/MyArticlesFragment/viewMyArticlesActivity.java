@@ -1,22 +1,23 @@
-package com.example.ed_talk.ViewInterviewExperiences;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+package com.example.ed_talk.ui.MyArticlesFragment;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.ed_talk.Modals.InterviewExperience;
+import com.example.ed_talk.R;
+import com.example.ed_talk.ViewInterviewExperiences.InterviewExperienceActivity;
+import com.example.ed_talk.ViewInterviewExperiences.InterviewExperienceAdapter;
+import com.example.ed_talk.ViewInterviewExperiences.SearchActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -24,15 +25,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.example.ed_talk.Modals.InterviewExperience;
-import com.example.ed_talk.R;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-public class InterviewExperienceActivity extends Activity {
-
+public class viewMyArticlesActivity extends Activity {
     DatabaseReference mMessagesDatabaseReference;
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
@@ -56,9 +53,9 @@ public class InterviewExperienceActivity extends Activity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             mEmail = user.getEmail();
-//            Log.i("InterviewExperienceActivity","mEmail=user.getEmail");
+
         }
-//        Log.i("InterviewExperienceActivity","mEmail=user.getEmail faileddd blahhhh idiaot");
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,48 +70,48 @@ public class InterviewExperienceActivity extends Activity {
 
 
 
-            mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Internship");
-            recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Internship");
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
-            interviewExperienceList = new ArrayList<>();
+        interviewExperienceList = new ArrayList<>();
 
-            layoutManager = new LinearLayoutManager(InterviewExperienceActivity.this);
-            layoutManager.setReverseLayout(true);
-            layoutManager.setStackFromEnd(true);
+        layoutManager = new LinearLayoutManager(viewMyArticlesActivity.this);
+        layoutManager.setReverseLayout(true);
+        layoutManager.setStackFromEnd(true);
 
-            recyclerView.setLayoutManager(layoutManager);
-            recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
 
-            final InterviewExperienceAdapter adapter = new InterviewExperienceAdapter(getApplicationContext(), interviewExperienceList);
-            recyclerView.setAdapter(adapter);
+        final InterviewExperienceAdapter adapter = new InterviewExperienceAdapter(getApplicationContext(), interviewExperienceList);
+        recyclerView.setAdapter(adapter);
 
-            mMessagesDatabaseReference.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot snapshot) {
-                    progressBar.setVisibility(View.GONE);
-                    interviewExperienceList.clear();
-                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                        InterviewExperience interviewExperience = dataSnapshot.getValue(InterviewExperience.class);
+        mMessagesDatabaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                progressBar.setVisibility(View.GONE);
+                interviewExperienceList.clear();
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    InterviewExperience interviewExperience = dataSnapshot.getValue(InterviewExperience.class);
 //                    if (interviewExperience.getCnfStatus()==1)
-                        if (interviewExperience.getEmail().equals(mEmail) && interviewExperience.getEmail() != null && mEmail != null)
-                            interviewExperienceList.add(interviewExperience);
-                    }
-                    adapter.notifyDataSetChanged();
+                    if (interviewExperience.getEmail().equals(mEmail) && interviewExperience.getEmail() != null && mEmail != null)
+                        interviewExperienceList.add(interviewExperience);
                 }
+                adapter.notifyDataSetChanged();
+            }
 
 
 
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-                }
-            });
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
 
         mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Placement");
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         interviewExperienceList = new ArrayList<>();
 
-        layoutManager = new LinearLayoutManager(InterviewExperienceActivity.this);
+        layoutManager = new LinearLayoutManager(viewMyArticlesActivity.this);
         layoutManager.setReverseLayout(true);
         layoutManager.setStackFromEnd(true);
 
@@ -151,7 +148,7 @@ public class InterviewExperienceActivity extends Activity {
         searchIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(InterviewExperienceActivity.this, SearchActivity.class));
+                startActivity(new Intent(viewMyArticlesActivity.this, SearchActivity.class));
             }
         });
 

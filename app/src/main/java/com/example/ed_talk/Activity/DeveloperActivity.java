@@ -33,6 +33,7 @@ public class DeveloperActivity extends Activity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         imgView = findViewById(R.id.profileImg);
+        imgView.setVisibility(View.GONE);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

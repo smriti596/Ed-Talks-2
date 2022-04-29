@@ -19,7 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-class InterviewExperienceAdapter extends RecyclerView.Adapter<InterviewExperienceAdapter.InterviewExperienceViewHolder> {
+public class InterviewExperienceAdapter extends RecyclerView.Adapter<InterviewExperienceAdapter.InterviewExperienceViewHolder> {
 
     private Context myContext;
 
