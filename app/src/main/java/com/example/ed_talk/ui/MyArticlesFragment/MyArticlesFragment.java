@@ -79,7 +79,7 @@ public class MyArticlesFragment extends Fragment {
 
         // VIEWING MY ARTICLES
 
-        mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Internship");
+        mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Placement");
         recyclerView = (RecyclerView) root.findViewById(R.id.recycler_view);
 
         interviewExperienceList = new ArrayList<>();
@@ -115,42 +115,42 @@ public class MyArticlesFragment extends Fragment {
             }
         });
 
-        mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Placement");
-        recyclerView = (RecyclerView) root.findViewById(R.id.recycler_view);
-
-        interviewExperienceList = new ArrayList<>();
-
-        layoutManager = new LinearLayoutManager(getContext());
-        layoutManager.setReverseLayout(true);
-        layoutManager.setStackFromEnd(true);
-
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setHasFixedSize(true);
-
-        final my_Articles_adapter aadapter = new my_Articles_adapter(getContext(), interviewExperienceList);
-        recyclerView.setAdapter(aadapter);
-
-        mMessagesDatabaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot snapshot) {
-                progressBar.setVisibility(View.GONE);
-                interviewExperienceList.clear();
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    InterviewExperience interviewExperience = dataSnapshot.getValue(InterviewExperience.class);
-
-                    if (interviewExperience.getCnfStatus()==1 && interviewExperience.getEmail().equals(mEmail) && interviewExperience.getEmail() != null && mEmail != null)
-                        interviewExperienceList.add(interviewExperience);
-
-                }
-                adapter.notifyDataSetChanged();
-            }
-
-
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
-        });
+//        mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Placement");
+//        recyclerView = (RecyclerView) root.findViewById(R.id.recycler_view);
+//
+//        interviewExperienceList = new ArrayList<>();
+//
+//        layoutManager = new LinearLayoutManager(getContext());
+//        layoutManager.setReverseLayout(true);
+//        layoutManager.setStackFromEnd(true);
+//
+//        recyclerView.setLayoutManager(layoutManager);
+//        recyclerView.setHasFixedSize(true);
+//
+//        final my_Articles_adapter aadapter = new my_Articles_adapter(getContext(), interviewExperienceList);
+//        recyclerView.setAdapter(aadapter);
+//
+//        mMessagesDatabaseReference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot snapshot) {
+//                progressBar.setVisibility(View.GONE);
+//                interviewExperienceList.clear();
+//                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+//                    InterviewExperience interviewExperience = dataSnapshot.getValue(InterviewExperience.class);
+//
+//                    if (interviewExperience.getCnfStatus()==1 && interviewExperience.getEmail().equals(mEmail) && interviewExperience.getEmail() != null && mEmail != null)
+//                        interviewExperienceList.add(interviewExperience);
+//
+//                }
+//                adapter.notifyDataSetChanged();
+//            }
+//
+//
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//            }
+//        });
 
 
 
