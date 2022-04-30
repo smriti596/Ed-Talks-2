@@ -32,7 +32,7 @@ public class my_Articles_adapter extends RecyclerView.Adapter<my_Articles_adapte
     //creating list to store all ojass departments
     private List<InterviewExperience> placementList;
 
-    DatabaseReference mMessagesDatabaseReference;
+    DatabaseReference mMessagesDatabaseReference1, mMessagesDatabaseReference2;
 
     FirebaseAuth auth;
 
@@ -41,7 +41,9 @@ public class my_Articles_adapter extends RecyclerView.Adapter<my_Articles_adapte
         this.myContext = myContext;
         this.placementList = placementList;
          auth=FirebaseAuth.getInstance();
-        mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Placement");
+        mMessagesDatabaseReference1 = FirebaseDatabase.getInstance().getReference().child("2021").child("Placement");
+        mMessagesDatabaseReference2 = FirebaseDatabase.getInstance().getReference().child("2021").child("Internship");
+
     }
 
     @NonNull
@@ -69,6 +71,7 @@ public class my_Articles_adapter extends RecyclerView.Adapter<my_Articles_adapte
             @Override
             public void onClick(View view) {
                 deletePost(interviewExperience.getChildKey());
+
 //                notifyItemRemoved(interviewExperienceViewHolder.getAdapterPosition());
 //                notifyItemRangeChanged(interviewExperienceViewHolder.getAdapterPosition(), getItemCount());
 
@@ -105,10 +108,14 @@ public class my_Articles_adapter extends RecyclerView.Adapter<my_Articles_adapte
         alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                DatabaseReference curr_add= mMessagesDatabaseReference
+                DatabaseReference curr_add1, curr_add2;
+                        curr_add1= mMessagesDatabaseReference1
                         .child(childKey);
+                    curr_add1.removeValue();
 
-                curr_add.removeValue();
+                    curr_add2 = mMessagesDatabaseReference2.child(childKey);
+                    curr_add2.removeValue();
+
                 Toast.makeText(myContext, "Post deleted",
                         Toast.LENGTH_SHORT).show();
                 notifyDataSetChanged();

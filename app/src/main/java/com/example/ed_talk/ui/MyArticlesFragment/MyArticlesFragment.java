@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -43,12 +44,14 @@ public class MyArticlesFragment extends Fragment {
     DatabaseReference mMessagesDatabaseReference;
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
-    TextView toolbarTitle;
+    TextView toolbarTitle, setTitle;
     ImageView searchIcon;
     ProgressBar progressBar;
     static List<InterviewExperience> interviewExperienceList;
     String mEmail="";
     FirebaseAuth mAuth;
+    Button placementBtn, internshipBtn;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -59,6 +62,9 @@ public class MyArticlesFragment extends Fragment {
         View root = binding.getRoot();
 
 
+        placementBtn= root.findViewById(R.id.placement);
+        internshipBtn= root.findViewById(R.id.internship);
+        setTitle= root.findViewById(R.id.setTitleTV);
 
         Toolbar toolbar = root.findViewById(R.id.toolbar);
         toolbar.setVisibility(View.GONE);
@@ -72,85 +78,101 @@ public class MyArticlesFragment extends Fragment {
 
         }
 
-        String expType = getActivity().getIntent().getStringExtra("ExpType");
-        toolbarTitle.setText(getActivity().getIntent().getStringExtra("Title"));
 
-
-        //CORRECTION DONEEEEE
-        // VIEWING MY ARTICLES
-        //CHNAGE THIS QUERY
-        mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Placement");
-        recyclerView = (RecyclerView) root.findViewById(R.id.recycler_view);
-
-        interviewExperienceList = new ArrayList<>();
-
-        layoutManager = new LinearLayoutManager(getContext());
-        layoutManager.setReverseLayout(true);
-        layoutManager.setStackFromEnd(true);
-
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setHasFixedSize(true);
-
-        final my_Articles_adapter adapter = new my_Articles_adapter(getContext(), interviewExperienceList);
-        recyclerView.setAdapter(adapter);
-
-        mMessagesDatabaseReference.addValueEventListener(new ValueEventListener() {
+        //Placement Experience
+        placementBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(DataSnapshot snapshot) {
-                progressBar.setVisibility(View.GONE);
-                interviewExperienceList.clear();
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    InterviewExperience interviewExperience = dataSnapshot.getValue(InterviewExperience.class);
+            public void onClick(View v) {
+                //CORRECTION DONEEEEE
+                // VIEWING MY ARTICLES
+                //CHANGE THIS QUERY
+                setTitle.setText("Placement Experiences");
+
+                mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Placement");
+                recyclerView = (RecyclerView) root.findViewById(R.id.recycler_view);
+
+                interviewExperienceList = new ArrayList<>();
+
+                layoutManager = new LinearLayoutManager(getContext());
+                layoutManager.setReverseLayout(true);
+                layoutManager.setStackFromEnd(true);
+
+                recyclerView.setLayoutManager(layoutManager);
+                recyclerView.setHasFixedSize(true);
+
+                final my_Articles_adapter adapter = new my_Articles_adapter(getContext(), interviewExperienceList);
+                recyclerView.setAdapter(adapter);
+
+                mMessagesDatabaseReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot snapshot) {
+                        progressBar.setVisibility(View.GONE);
+                        interviewExperienceList.clear();
+                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                            InterviewExperience interviewExperience = dataSnapshot.getValue(InterviewExperience.class);
 //                    if (interviewExperience.getCnfStatus()==1)
-                    if (interviewExperience.getCnfStatus()==1 && interviewExperience.getEmail().equals(mEmail) && interviewExperience.getEmail() != null && mEmail != null)
-                        interviewExperienceList.add(interviewExperience);
-                }
-                adapter.notifyDataSetChanged();
-            }
+                            if (interviewExperience.getCnfStatus()==1 && interviewExperience.getEmail().equals(mEmail) && interviewExperience.getEmail() != null && mEmail != null)
+                                interviewExperienceList.add(interviewExperience);
+                        }
+                        adapter.notifyDataSetChanged();
+                    }
 
 
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                    }
+                });
             }
         });
 
-//        mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Placement");
-//        recyclerView = (RecyclerView) root.findViewById(R.id.recycler_view);
-//
-//        interviewExperienceList = new ArrayList<>();
-//
-//        layoutManager = new LinearLayoutManager(getContext());
-//        layoutManager.setReverseLayout(true);
-//        layoutManager.setStackFromEnd(true);
-//
-//        recyclerView.setLayoutManager(layoutManager);
-//        recyclerView.setHasFixedSize(true);
-//
-//        final my_Articles_adapter aadapter = new my_Articles_adapter(getContext(), interviewExperienceList);
-//        recyclerView.setAdapter(aadapter);
-//
-//        mMessagesDatabaseReference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot snapshot) {
-//                progressBar.setVisibility(View.GONE);
-//                interviewExperienceList.clear();
-//                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-//                    InterviewExperience interviewExperience = dataSnapshot.getValue(InterviewExperience.class);
-//
-//                    if (interviewExperience.getCnfStatus()==1 && interviewExperience.getEmail().equals(mEmail) && interviewExperience.getEmail() != null && mEmail != null)
-//                        interviewExperienceList.add(interviewExperience);
-//
-//                }
-//                adapter.notifyDataSetChanged();
-//            }
-//
-//
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//            }
-//        });
+
+        //internship experience
+        internshipBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //CORRECTION DONEEEEE
+                // VIEWING MY ARTICLES
+                //CHANGE THIS QUERY
+                setTitle.setText("Internship Experiences");
+
+                mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Internship");
+                recyclerView = (RecyclerView) root.findViewById(R.id.recycler_view);
+
+                interviewExperienceList = new ArrayList<>();
+
+                layoutManager = new LinearLayoutManager(getContext());
+                layoutManager.setReverseLayout(true);
+                layoutManager.setStackFromEnd(true);
+
+                recyclerView.setLayoutManager(layoutManager);
+                recyclerView.setHasFixedSize(true);
+
+                final my_Articles_adapter adapter = new my_Articles_adapter(getContext(), interviewExperienceList);
+                recyclerView.setAdapter(adapter);
+
+                mMessagesDatabaseReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot snapshot) {
+                        progressBar.setVisibility(View.GONE);
+                        interviewExperienceList.clear();
+                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                            InterviewExperience interviewExperience = dataSnapshot.getValue(InterviewExperience.class);
+//                    if (interviewExperience.getCnfStatus()==1)
+                            if (interviewExperience.getCnfStatus()==1 && interviewExperience.getEmail().equals(mEmail) && interviewExperience.getEmail() != null && mEmail != null)
+                                interviewExperienceList.add(interviewExperience);
+                        }
+                        adapter.notifyDataSetChanged();
+                    }
+
+
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                    }
+                });
+            }
+        });
 
 
 

@@ -45,6 +45,32 @@
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/internship"
+        android:text="Click to view Internship experience"
+        android:layout_gravity="center"></Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/placement"
+        android:text="Click to view Placement experience"
+        android:layout_gravity="center"></Button>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/setTitleTV"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/teal_200"
+        android:textStyle="bold"
+        android:fontFamily="@font/robotobold"></TextView>
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
