@@ -11,7 +11,11 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.ed_talk.Modals.InterviewExperience;
+import com.example.ed_talk.Modals.Post;
 import com.example.ed_talk.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -25,6 +29,9 @@ public class InterviewExperienceAdapter extends RecyclerView.Adapter<InterviewEx
 
     //creating list to store all ojass departments
     private List<InterviewExperience> placementList;
+    private FirebaseUser user;
+
+
 
     //getting the context and ojass department list with constructor
     public InterviewExperienceAdapter(Context myContext, List<InterviewExperience> placementList){
@@ -46,9 +53,12 @@ public class InterviewExperienceAdapter extends RecyclerView.Adapter<InterviewEx
     @Override
     public void onBindViewHolder(@NonNull final InterviewExperienceViewHolder interviewExperienceViewHolder, final int position) {
         final InterviewExperience interviewExperience = placementList.get(position);
+        user = FirebaseAuth.getInstance().getCurrentUser();
 
         interviewExperienceViewHolder.mStudName.setText(interviewExperience.getStudName());
         interviewExperienceViewHolder.mStudCompany.setText(interviewExperience.getCompanyName());
+
+
 
   /*
         Glide.with(myContext)
@@ -89,6 +99,7 @@ public class InterviewExperienceAdapter extends RecyclerView.Adapter<InterviewEx
             mStudName = itemView.findViewById(R.id.nameTextView);
             mStudCompany = itemView.findViewById(R.id.studCompanyName);
             mCardView = itemView.findViewById(R.id.cardView);
+
         }
 
     }

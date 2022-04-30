@@ -390,25 +390,91 @@
 
 
             <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/like_article"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_like"
+                    />
+
+                <ImageView
+                    android:id="@+id/dislike_article"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_dislike"
+                    />
+
+            <!--    <ImageView
+                    android:id="@+id/report_article"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_comment"
+                    /> -->
+
+                <!--  <ImageView
+                      android:id="@+id/save"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:src="@drawable/ic_save"
+                      />-->
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/likeCount_article"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:textColor="#000"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/dislikeCount_article"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:gravity="center"
+                    android:textColor="#000"/>
+
+             <!--   <TextView
+                    android:id="@+id/ReportCount_article"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="15"
+                    android:textColor="#000"/>
+                    -->
+
+                <!--    <TextView
+                        android:id="@+id/saveTxt"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Save"
+                        android:textColor="#000"/> -->
 
 
-                <Button
-                    android:id="@+id/report"
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-
-                    android:background="@drawable/no"
-                    android:textSize="0dp"
-                    android:layout_marginLeft="300dp"
-
-                    android:layout_marginRight="8dp"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"/>
             </LinearLayout>
+
 
         </LinearLayout>
     </ScrollView>

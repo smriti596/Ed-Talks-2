@@ -85,6 +85,7 @@ public class InterviewExperienceActivity extends Activity {
                 adapter.notifyDataSetChanged();
             }
 
+
             @Override
             public void onCancelled(DatabaseError databaseError) {
             }
