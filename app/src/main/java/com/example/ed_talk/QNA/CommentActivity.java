@@ -54,7 +54,7 @@ public class CommentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comment);
         initView();
-        getImage();
+        //getImage();
         loadAllComment();
         postComment.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,7 +120,7 @@ public class CommentActivity extends AppCompatActivity {
         });
     }
 
-    private void getImage() {
+  /*  private void getImage() {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         reference.addValueEventListener(new ValueEventListener() {
@@ -135,7 +135,7 @@ public class CommentActivity extends AppCompatActivity {
                 Toast.makeText(CommentActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-    }
+    }*/
 
     private void initView() {
         //toolbar = findViewById(R.id.comment_toolbar);

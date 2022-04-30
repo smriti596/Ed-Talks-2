@@ -170,8 +170,7 @@ public class UserProfileActivity extends Activity {
                     FirebaseDatabase.getInstance().getReference()
                             .child("dislikes")
                             .child(interviewExperience.getChildKey())
-
-
+                            .child(user.getUid())
                             .setValue(true);
                 }else {
                     FirebaseDatabase.getInstance().getReference()
