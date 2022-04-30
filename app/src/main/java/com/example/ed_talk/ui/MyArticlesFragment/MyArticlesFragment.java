@@ -76,9 +76,9 @@ public class MyArticlesFragment extends Fragment {
         toolbarTitle.setText(getActivity().getIntent().getStringExtra("Title"));
 
 
-
+        //CORRECTION DONEEEEE
         // VIEWING MY ARTICLES
-
+        //CHNAGE THIS QUERY
         mMessagesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("2021").child("Placement");
         recyclerView = (RecyclerView) root.findViewById(R.id.recycler_view);
 
