@@ -86,7 +86,9 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 User user = snapshot.getValue(User.class);
                // Glide.with(context).load(user.getProfileimageurl()).into(profileImageView);
-                assert user != null;
+
+                // assert user != null;
+                if(user!=null)
                 usernameTextView.setText(user.getFullName());
 
 
