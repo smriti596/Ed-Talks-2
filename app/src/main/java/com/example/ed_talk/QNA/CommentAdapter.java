@@ -88,6 +88,8 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
                // Glide.with(context).load(user.getProfileimageurl()).into(profileImageView);
 
                 // assert user != null;
+
+                //inplace of assert
                 if(user!=null)
                     usernameTextView.setText(user.getFullName());
 
