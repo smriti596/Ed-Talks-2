@@ -89,7 +89,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
 
                 // assert user != null;
                 if(user!=null)
-                usernameTextView.setText(user.getFullName());
+                    usernameTextView.setText(user.getFullName());
 
 
             }
