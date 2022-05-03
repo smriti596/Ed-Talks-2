@@ -22,15 +22,13 @@
         android:name="com.example.ed_talk.ui.slideshow.SlideshowFragment"
         android:label="Companies"
         tools:layout="@layout/fragment_slideshow" />
-    <fragment
-        android:id="@+id/bookmarksFragment"
-        android:name="com.example.ed_talk.Fragments.BookmarksFragment"
-        android:label="Bookmarks"
-        tools:layout="@layout/fragment_bookmarks" />
+
+    <!--
     <fragment
         android:id="@+id/qnaFragment"
         android:name="com.example.ed_talk.QNA.QNA_homeActivity"
         android:label="QnA"
         tools:layout="@layout/activity_qna_home" />
+    -->
 
 </navigation>
