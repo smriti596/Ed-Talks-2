@@ -174,7 +174,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="4dp"
                 android:text="Extras"
-                android:textSize="16dp">
+                android:textSize="16dp"
+                android:textColor="@color/black">
 
             </TextView>
 
@@ -182,49 +183,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/pastStats"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="3dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/stats">
-
-                        </ImageView>
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#66000000">
-
-                        </RelativeLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:padding="15dp"
-                            android:text="Past Stats"
-                            android:textColor="@color/white"
-                            android:textSize="18dp"/>
-                    </RelativeLayout>
-
-                </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/pastRecruiters"
@@ -237,6 +195,7 @@
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="3dp">
+
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -270,58 +229,8 @@
                     </RelativeLayout>
 
                 </androidx.cardview.widget.CardView>
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="30dp"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/tapTeam"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="3dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/portfolio">
-
-                        </ImageView>
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#66000000">
-
-                        </RelativeLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:padding="15dp"
-                            android:text="Portfolio"
-                            android:textColor="@color/white"
-                            android:textSize="18dp"/>
-                    </RelativeLayout>
-
-                </androidx.cardview.widget.CardView>
-
+                <!--2-->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/about"
                     android:layout_width="match_parent"
@@ -363,6 +272,7 @@
 
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
+
 
 
         </LinearLayout>
