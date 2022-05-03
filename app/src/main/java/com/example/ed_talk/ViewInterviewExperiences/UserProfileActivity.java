@@ -164,7 +164,6 @@ public class UserProfileActivity extends Activity {
                     FirebaseDatabase.getInstance().getReference()
                             .child("likes")
                             .child(interviewExperience.getChildKey())
-
                             .child(user.getUid())
                             .removeValue();
                     FirebaseDatabase.getInstance().getReference()

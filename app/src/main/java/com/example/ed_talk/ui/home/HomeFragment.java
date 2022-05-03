@@ -25,6 +25,8 @@ import com.example.ed_talk.R;
 import com.example.ed_talk.Utils.SharedPrefManager;
 import com.example.ed_talk.ViewInterviewExperiences.InterviewExperienceActivity;
 import com.example.ed_talk.databinding.FragmentHomeBinding;
+import com.example.ed_talk.ui.static_pages.About;
+import com.example.ed_talk.ui.static_pages.Past_Recruiters;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -52,6 +54,7 @@ public class HomeFragment extends Fragment {
     String currPlacementYear;
     DatabaseReference mSliderReference;
     TextView mCurrPlacementYear;
+    CardView Past_Companies,about;
 
     LinearLayout internshipExperience, shareInterviewExperience,viewInterviewExperiences;
 
@@ -71,7 +74,8 @@ public class HomeFragment extends Fragment {
         shareInterviewExperience = (LinearLayout)root.findViewById(R.id.shareInterviewExperience);
         internshipExperience = (LinearLayout)root.findViewById(R.id.internshipExprience);
         mCurrPlacementYear = (TextView)root.findViewById(R.id.currPlacementYear);
-
+        Past_Companies=(CardView)root.findViewById(R.id.pastRecruiters);
+        about=(CardView)root.findViewById(R.id.about);
         prefManager = new SharedPrefManager(getActivity());
         if(prefManager.isPopupDialogShown()==false){
             showReportedDialog();
@@ -108,7 +112,20 @@ public class HomeFragment extends Fragment {
                 startActivity(i);
             }
         });
-
+        Past_Companies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), Past_Recruiters.class);
+                startActivity(i);
+            }
+        });
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), About.class);
+                startActivity(i);
+            }
+        });
 
         return root;
     }
