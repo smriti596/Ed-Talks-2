@@ -9,6 +9,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private TextView registerUser,logInTextView;
     private EditText editTextUserName, editTextUserAge, editTextUserEmail, editTextUserPassword;
     private FirebaseAuth mAuth;
+    private ImageView backArrow;
     private ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         registerUser= (Button)findViewById(R.id.cirRegisterButton);
         registerUser.setOnClickListener(this);
-
+backArrow=findViewById(R.id.backarrow);
         editTextUserName=(EditText) findViewById(R.id.editTextName);
         editTextUserAge=(EditText) findViewById(R.id.editTextAge);
         editTextUserEmail=(EditText) findViewById(R.id.editTextEmail);
@@ -44,6 +46,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         progressBar=(ProgressBar) findViewById(R.id.progressBar);
         logInTextView=(TextView) findViewById(R.id.textview_logIn);
         logInTextView.setOnClickListener(this);
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
     }
 

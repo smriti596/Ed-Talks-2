@@ -3,10 +3,14 @@ package com.example.ed_talk.ui.static_pages;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ed_talk.R;
@@ -15,7 +19,7 @@ public class About extends AppCompatActivity {
 
 
     TextView mAbout,mOnus,mTeam;
-    Button fbLink,websiteLink;
+    ImageView fbLink,websiteLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +46,25 @@ public class About extends AppCompatActivity {
         mOnus.setText(onus);
         mTeam.setText(team);
 
-        fbLink=(Button)findViewById(R.id.fbLink);
-        websiteLink=(Button)findViewById(R.id.websiteLink);
+        fbLink=(ImageView) findViewById(R.id.fbLink);
+        websiteLink=(ImageView) findViewById(R.id.websiteLink);
 
-        fbLink.setText("https://www.facebook.com/banasthali.org");
-        websiteLink.setText("http://www.banasthali.org/banasthali/wcms/en/home/");
+        fbLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/banasthali.org")));
+            }
+        });
+
+websiteLink.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.banasthali.org/banasthali/wcms/en/home/")));
+
+
+    }
+});
+       // fbLink.setText("https://www.facebook.com/banasthali.org");
+      //  websiteLink.setText("http://www.banasthali.org/banasthali/wcms/en/home/");
     }
 }

@@ -76,19 +76,19 @@
                 android:layout_marginBottom="100dp"
                 android:orientation="horizontal">
 
-                <Button
+                <ImageView
                     android:id="@+id/fbLink"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/fb"
+                    android:background="@drawable/ic_facebook"
                     android:singleLine="true"
                     android:textColor="@android:color/transparent"
                     android:autoLink="web"
                     android:textSize="15sp"/>
 
-                <Button
+                <ImageView
                     android:id="@+id/websiteLink"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
