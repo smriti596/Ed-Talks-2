@@ -46,7 +46,6 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
     private Switch mIsInternshipReview;
     private EditText mCompanyName,mJobTitle,mInternCompany,mProjectDesc,mOnlineRound,mTechRound,mHrRound,mWordsToJr;
     private Spinner mBranchSpin,mInterviewModeSpin,mInterviewDifficultySpin;
-    private ImageView mPhotoPickerButton;
     private Button mSendButton;
     private DatabaseReference mMessagesDatabaseReference;
     String branchRes,diffRes,modeRes;
@@ -54,7 +53,6 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
     String mEmail="";
     FirebaseAuth mAuth;
 
-    String imageUrlIfProfileNotUploaded = "";
     StorageReference storageReference;
 
     SharedPreferences prefs;
@@ -72,7 +70,6 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
         mCompanyName = (EditText) findViewById(R.id.companyName);
         mJobTitle = (EditText) findViewById(R.id.jobTitle);
         mInternCompany=(EditText)findViewById(R.id.internCompany);
-        mPhotoPickerButton = (ImageView) findViewById(R.id.photoPickerButton);
         mProjectDesc=(EditText)findViewById(R.id.projectDesc);
         mOnlineRound=(EditText)findViewById(R.id.onlineRound);
         mTechRound=(EditText)findViewById(R.id.techRound);
@@ -87,18 +84,6 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
         if (user != null) {
             mEmail = user.getEmail();
         }
-
-
-
-        mPhotoPickerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),UploadImage.class);
-//                startActivity(intent);
-                intent.putExtra("Value1", "1");
-                startActivityForResult(intent, 100);
-            }
-        });
 
         mIsInternshipReview.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -125,14 +110,13 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
                 company=mCompanyName.getText().toString();
                 jobTitle=mJobTitle.getText().toString();
                 internCompany=mInternCompany.getText().toString();
-                photoUrl=UploadImage.imageUrl;
                 projectDesc=mProjectDesc.getText().toString();
                 onlinRound=mOnlineRound.getText().toString();
                 techRound=mTechRound.getText().toString();
                 hrRound=mHrRound.getText().toString();
                 wordsToJr=mWordsToJr.getText().toString();
 
-                imageUrlIfProfileNotUploaded = photoUrl;
+                //imageUrlIfProfileNotUploaded = photoUrl;
                 Email=mEmail;
                 // Validate all the required inputs
                 int flag = 0;
@@ -167,7 +151,7 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
                     String childKey = mMessagesDatabaseReference.push().getKey();
 
                     InterviewExperience interviewExperience = new InterviewExperience(mCnfStatus, name, branchRes, whatsappNum, linkedInId,
-                            isInternshipReview, company, jobTitle, internCompany,photoUrl, projectDesc,
+                            isInternshipReview, company, jobTitle, internCompany, projectDesc,
                             onlinRound, techRound, hrRound, modeRes, diffRes, wordsToJr, childKey, mEmail);
 
                     mMessagesDatabaseReference.child(childKey).setValue(interviewExperience);
@@ -184,7 +168,6 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
                     mTechRound.setText("");
                     mHrRound.setText("");
                     mWordsToJr.setText("");
-                    UploadImage.imageUrl=null;
                     showSuccessDialog();
                 }else {
                     submitForm();
@@ -218,22 +201,6 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
             @Override
             public void onClick(View v) {
 
-                // Delete the profile image if interview experience is not submitted
-                if (imageUrlIfProfileNotUploaded!=null && !imageUrlIfProfileNotUploaded.equals("")) {
-                    storageReference = FirebaseStorage.getInstance().getReferenceFromUrl(imageUrlIfProfileNotUploaded);
-
-                    storageReference.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            // File deleted successfully
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception exception) {
-                            // Uh-oh, an error occurred!
-                        }
-                    });
-                }
                 onBackPressed();
             }
         });
@@ -246,15 +213,6 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
         if (requestCode == 100) {
             if(resultCode == Activity.RESULT_OK){
                 String url =data.getStringExtra("result");
-
-                imageUrlIfProfileNotUploaded = url;
-
-                Glide.with(AddInterviewExperienceActivity.this)
-                        .load(url)
-                        .apply(new RequestOptions()
-                                .placeholder(R.drawable.user_avtar)
-                                .fitCenter())
-                        .into(mPhotoPickerButton);
             }
         }
     }
@@ -411,6 +369,4 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
         }
     }
-
-
 }

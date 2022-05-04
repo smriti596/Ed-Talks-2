@@ -31,19 +31,49 @@
         <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/layout/cursor_drawable.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/layout/fragment_feedback.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/shubh/Desktop/Ed-Talks/app/src/main/res/layout/interview_exp_success_dialog.xml" value="0.1933876811594203" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/drawable/ic_add_img.xml" value="0.2703125" />
         <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_about.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_add_interview_experience.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_admin.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_ask_question.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_comment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_developer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_edit_question.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_forgot_password.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_interview_experience.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_past_recruiters.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_qna_home.xml" value="0.18206521739130435" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_search.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_splash.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_upload_image.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_user_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/activity_welcome.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/app_bar_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/card_interview_experience.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/card_my_experience.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/comment_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/content_main.xml" value="0.19021739130434784" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/fragment_bookmarks.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/fragment_myarticles.xml" value="0.19021739130434784" />
         <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/fragment_qna.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/fragment_slideshow.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/interview_exp_request_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/interview_exp_success_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/item_slider.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/nav_header_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/question_card_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/welcome_slide1.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/welcome_slide2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/welcome_slide3.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/layout/welcome_slide4.xml" value="0.264" />
         <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/menu/activity_main_drawer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/menu/main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/menu/post_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/shubh/Desktop/project/Ed-Talks/app/src/main/res/menu/qna_home.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

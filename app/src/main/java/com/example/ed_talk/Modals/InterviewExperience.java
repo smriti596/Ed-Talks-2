@@ -12,7 +12,6 @@ public class InterviewExperience implements Serializable {
     private String companyName;
     private String jobTitle;
     private String internCompany;
-    private String photoUrl;
     private String projectDesc;
     private String onlineRound;
     private String techRound;
@@ -25,7 +24,7 @@ public class InterviewExperience implements Serializable {
 
     public InterviewExperience() {}
 
-    public InterviewExperience(int cnfStatus, String studName, String branch, String whatsappNum, String linkedInId, boolean isInternshipReview, String companyName, String jobTitle, String internCompany, String photoUrl, String projectDesc, String onlineRound, String techRound, String hrRound, String interviewMode, String interviewDifficulty, String wordsToJr, String childKey, String email) {
+    public InterviewExperience(int cnfStatus, String studName, String branch, String whatsappNum, String linkedInId, boolean isInternshipReview, String companyName, String jobTitle, String internCompany, String projectDesc, String onlineRound, String techRound, String hrRound, String interviewMode, String interviewDifficulty, String wordsToJr, String childKey, String email) {
         this.cnfStatus = cnfStatus;
         this.studName = studName;
         this.branch = branch;
@@ -35,7 +34,6 @@ public class InterviewExperience implements Serializable {
         this.companyName = companyName;
         this.jobTitle = jobTitle;
         this.internCompany = internCompany;
-        this.photoUrl = photoUrl;
         this.projectDesc = projectDesc;
         this.onlineRound = onlineRound;
         this.techRound = techRound;
@@ -117,14 +115,6 @@ public class InterviewExperience implements Serializable {
 
     public void setInternCompany(String internCompany) {
         this.internCompany = internCompany;
-    }
-
-    public String getPhotoUrl() {
-        return photoUrl;
-    }
-
-    public void setPhotoUrl(String photoUrl) {
-        this.photoUrl = photoUrl;
     }
 
     public String getProjectDesc() {

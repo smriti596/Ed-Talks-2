@@ -24,11 +24,9 @@
         <activity android:name=".QNA.QNA_homeActivity" />
         <activity android:name=".QNA.QNA_Activity" />
         <activity android:name=".AddInterviewExperience.AddInterviewExperienceActivity" />
-        <activity android:name=".AddInterviewExperience.UploadImage" />
         <activity android:name=".ViewInterviewExperiences.UserProfileActivity" />
         <activity android:name=".ViewInterviewExperiences.InterviewExperienceActivity" />
         <activity android:name=".ViewInterviewExperiences.SearchActivity" />
-        <activity android:name=".SignIn.AdminActivity" />
         <activity android:name=".Activity.DeveloperActivity" />
         <activity
             android:name=".Activity.MainActivity"

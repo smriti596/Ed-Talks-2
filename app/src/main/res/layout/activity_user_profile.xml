@@ -37,14 +37,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/photoUrl"
-                android:layout_margin="8dp"
-                android:layout_width="100dp"
-                android:src="@drawable/user_avtar"
-                android:layout_gravity="center_horizontal"
-                android:layout_height="100dp" />
-
             <TextView
                 android:id="@+id/studName"
                 android:layout_width="match_parent"
@@ -88,7 +80,7 @@
                 android:textAlignment="center"
                 android:textSize="17dp"
                 android:textStyle="bold"
-                android:text="NIT Jamshedpur"
+                android:text="Banasthali Vidyapith"
                 android:textColor="@color/grey"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
