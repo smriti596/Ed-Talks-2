@@ -54,7 +54,6 @@ public class UserProfileActivity extends Activity {
             }
         });
 
-        //mImageView=(ImageView)findViewById(R.id.photoUrl);
         mStudName=(TextView)findViewById(R.id.studName);
         mStudentLinkedIn=(Button) findViewById(R.id.linkedInId);
         mStudentPhone=(Button) findViewById(R.id.phoneNum);
@@ -72,25 +71,13 @@ public class UserProfileActivity extends Activity {
         mStudentWhatsapp=(Button)findViewById(R.id.whatsappNum);
         likeCount=findViewById(R.id.likeCount_article);
         dislikeCount=findViewById(R.id.dislikeCount_article);
-       // reportCount=findViewById(R.id.ReportCount_article);
         like=findViewById(R.id.like_article);
         dislike=findViewById(R.id.dislike_article);
-        //report=findViewById(R.id.report_article);
 
       //  InterviewExperience
         user = FirebaseAuth.getInstance().getCurrentUser();
                 interviewExperience = (InterviewExperience)getIntent().getSerializableExtra("StudentDetails");
-       // InterviewExperience curr=
-        /*
-        Glide.with(getApplicationContext())
-                .load(interviewExperience.getPhotoUrl())
-                .apply(new RequestOptions()
-                        .placeholder(R.drawable.user_avtar)
-                        .centerCrop()
-                        .fitCenter())
-                .into(mImageView);
 
-        */
         mStudName.setText(interviewExperience.getStudName());
         mStudentLinkedIn.setText(interviewExperience.getLinkedInId());
         mStudentPhone.setText(interviewExperience.getWhatsappNum());

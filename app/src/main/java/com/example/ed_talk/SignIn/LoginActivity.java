@@ -144,7 +144,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
                     }else{
-//                        user.sendEmailVerification();
                         resendVerificationMail.setVisibility(View.VISIBLE);
                         Toast.makeText(LoginActivity.this,"Email not verified! Verify your email and Try Again!",Toast.LENGTH_LONG).show();
                         progressBar.setVisibility((View.GONE));
@@ -152,7 +151,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 }else
                 {
-                    //Toast.makeText(LoginActivity.this,"Failed to login! Please check your credentials.",Toast.LENGTH_LONG).show();
                     Toast.makeText(LoginActivity.this,"Failed to login!"+task.getException().getMessage(),Toast.LENGTH_LONG).show();
                     progressBar.setVisibility((View.GONE));
                 }

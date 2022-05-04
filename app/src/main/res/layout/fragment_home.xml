@@ -51,8 +51,6 @@
                 app:tabPaddingEnd="5.5dp"
                 app:tabPaddingStart="5.5dp" />
 
-
-
             <TextView
                 android:id="@+id/currPlacementYear"
                 android:layout_width="match_parent"
@@ -272,8 +270,6 @@
 
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
-
-
 
         </LinearLayout>
     </ScrollView>

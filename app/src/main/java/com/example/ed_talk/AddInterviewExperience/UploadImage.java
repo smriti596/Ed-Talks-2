@@ -86,9 +86,6 @@ public class UploadImage extends Activity {
             progressDialog.show();
             progressDialog.setCancelable(false);
 
-            //"images/"+UUID.randomUUID().toString()
-//            final StorageReference ref=storageReference.child("images/"+ System.currentTimeMillis()+"."+getFileExtension(filePath));
-
             final StorageReference ref=storageReference.child(""+ System.currentTimeMillis()+"."+getFileExtension(filePath));
             ref.putFile(filePath).
                     addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {

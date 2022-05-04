@@ -70,9 +70,6 @@ public class QNA_homeActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 User user = snapshot.getValue(User.class);
-              //  Glide.with(HomeActivity.this).load(user.getProfileimageurl()).into(navHeaderImage);
-             //  navUsername.setText(user.getFullName());
-              //  navEmail.setText(user.getEmail());
             }
 
             @Override
@@ -118,9 +115,6 @@ public class QNA_homeActivity extends AppCompatActivity {
 
 
     public void initView() {
-       // drawerLayout = findViewById(R.id.drawer_layout);
-       // toolbar = findViewById(R.id.home_toolbar);
-       // navigationView = findViewById(R.id.navigation_view);
         fab = findViewById(R.id.fab);
         recyclerView = findViewById(R.id.recyclerView);
         progressCircular = findViewById(R.id.progress_circular);
@@ -135,9 +129,6 @@ public class QNA_homeActivity extends AppCompatActivity {
         postAdapter = new PostAdapter(QNA_homeActivity.this, postList);
         recyclerView.setAdapter(postAdapter);
 
-       // navHeaderImage = navigationView.getHeaderView(0).findViewById(R.id.nav_header_profile_image);
-     //   navUsername = navigationView.getHeaderView(0).findViewById(R.id.nav_header_username);
-     //   navEmail = navigationView.getHeaderView(0).findViewById(R.id.nav_header_useremail);
         userReference = FirebaseDatabase.getInstance().getReference().child("users")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
     }

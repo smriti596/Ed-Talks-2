@@ -226,13 +226,11 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
                         @Override
                         public void onSuccess(Void aVoid) {
                             // File deleted successfully
-//                            Toast.makeText(AddInterviewExperienceActivity.this, "Image deleted successfully!", Toast.LENGTH_SHORT).show();
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception exception) {
                             // Uh-oh, an error occurred!
-//                            Toast.makeText(AddInterviewExperienceActivity.this, "Failed to delete the image!", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }

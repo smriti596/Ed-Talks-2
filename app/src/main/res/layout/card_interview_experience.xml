@@ -58,17 +58,9 @@
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="Company Name" />
 
-
-
                 </LinearLayout>
 
-
-
-
             </LinearLayout>
-
-
-
 
             <RelativeLayout
                 android:layout_width="match_parent"

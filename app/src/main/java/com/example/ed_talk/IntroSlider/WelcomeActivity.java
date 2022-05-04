@@ -52,7 +52,6 @@ public class WelcomeActivity extends Activity {
             }
             else {
                 launchHomeScreen();
-              //  startActivity(new Intent(this, LoginActivity.class));
                 finish();
             }
 

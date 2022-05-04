@@ -58,15 +58,11 @@ public class EditQuestionActivity extends AppCompatActivity {
     }
 
     private void initView() {
-       // toolbar = findViewById(R.id.edit_question_toolbar);
-       // setSupportActionBar(toolbar);
-        //getSupportActionBar().setTitle("Edit Question");
         spinner = findViewById(R.id.edit_topic_spiner);
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.topics));
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         questionEdt = findViewById(R.id.edit_question_text);
-      //  imageView = findViewById(R.id.edit_questionImage);
         cancelBtn = findViewById(R.id.edit_cancelBtn);
         updateBtn = findViewById(R.id.edit_postBtn);
         postID = getIntent().getStringExtra("postid");
@@ -82,11 +78,6 @@ public class EditQuestionActivity extends AppCompatActivity {
                     int spinerPos = adapter.getPosition(post.getTopic());
                     spinner.setSelection(spinerPos);
                     questionEdt.setText(post.getQuestion());
-                   /* if (post.getQuestionImage() != null) {
-                        Glide.with(EditQuestionActivity.this)
-                                .load(post.getQuestionImage())
-                                .into(imageView);
-                    }*/
                 }
             }
 

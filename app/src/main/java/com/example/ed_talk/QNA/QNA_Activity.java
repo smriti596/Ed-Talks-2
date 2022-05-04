@@ -95,15 +95,7 @@ public class QNA_Activity extends AppCompatActivity {
             }
         });
 
-     /*   imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_PICK);
-                intent.setType("image/*");
-                startActivityForResult(intent,1);
-            }
-        });
-*/
+
         cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,14 +112,11 @@ public class QNA_Activity extends AppCompatActivity {
     }
 
     public void  initView() {
-      //  toolbar = findViewById(R.id.question_toolbar);
         spinner = findViewById(R.id.spiner);
         questionEdt = findViewById(R.id.question_text);
-       // imageView = findViewById(R.id.questionImage);
         cancelBtn = findViewById(R.id.cancelBtn);
         postBtn = findViewById(R.id.postBtn);
-      //  setSupportActionBar(toolbar);
-      //  getSupportActionBar().setTitle("Ask a question");
+
         loader = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();

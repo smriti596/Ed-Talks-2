@@ -218,7 +218,6 @@
                     android:textSize="15dp"/>
             </LinearLayout>
 
-
             <!--Technical round-->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -411,22 +410,6 @@
                     android:src="@drawable/ic_dislike"
                     />
 
-            <!--    <ImageView
-                    android:id="@+id/report_article"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_comment"
-                    /> -->
-
-                <!--  <ImageView
-                      android:id="@+id/save"
-                      android:layout_width="0dp"
-                      android:layout_height="wrap_content"
-                      android:layout_weight="1"
-                      android:src="@drawable/ic_save"
-                      />-->
-
             </LinearLayout>
 
             <LinearLayout
@@ -452,25 +435,6 @@
                     android:text="1"
                     android:gravity="center"
                     android:textColor="#000"/>
-
-             <!--   <TextView
-                    android:id="@+id/ReportCount_article"
-                    android:gravity="center"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="15"
-                    android:textColor="#000"/>
-                    -->
-
-                <!--    <TextView
-                        android:id="@+id/saveTxt"
-                        android:gravity="center"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Save"
-                        android:textColor="#000"/> -->
 
 
             </LinearLayout>

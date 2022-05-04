@@ -39,23 +39,6 @@
                     android:icon="@drawable/ic_menu_my_articles"
                     android:menuCategory="secondary"
                     android:title="My Articles" />
-
-                <!--
-                <item
-                    android:id="@+id/nav_slideshow"
-                    android:icon="@drawable/ic_menu_companies"
-                    android:menuCategory="secondary"
-                    android:title="Companies" />
-                    -->
-
-                <!--
-                <item
-                    android:id="@+id/bookmarksFragment"
-                    android:icon="@drawable/ic_menu_bookmarks"
-                    android:menuCategory="secondary"
-                    android:title="Bookmarks" />
-                    -->
-
                 <item
                     android:id="@+id/qna_"
                     android:icon="@drawable/ic_menu_qna"

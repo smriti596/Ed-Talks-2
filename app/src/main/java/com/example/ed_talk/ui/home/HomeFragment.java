@@ -19,7 +19,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.ed_talk.AddInterviewExperience.AddInterviewExperienceActivity;
-import com.example.ed_talk.Carousel.SliderAdapter;
+//import com.example.ed_talk.Carousel.SliderAdapter;
 import com.example.ed_talk.Modals.SliderImageAndText;
 import com.example.ed_talk.R;
 import com.example.ed_talk.Utils.SharedPrefManager;

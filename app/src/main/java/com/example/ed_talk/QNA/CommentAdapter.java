@@ -72,7 +72,6 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
 
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
-           // commentorProfileImage = itemView.findViewById(R.id.commentor_profile_image);
             commentorUsername = itemView.findViewById(R.id.commentor_username);
             commentorComment = itemView.findViewById(R.id.commentor_comment);
             commentDate = itemView.findViewById(R.id.commentDate);
@@ -85,7 +84,6 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 User user = snapshot.getValue(User.class);
-               // Glide.with(context).load(user.getProfileimageurl()).into(profileImageView);
 
                 // assert user != null;
 

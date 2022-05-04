@@ -88,13 +88,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void logout(MenuItem item) {
         Toast.makeText(this, "Logged out successfully!", Toast.LENGTH_SHORT).show();
-     /*   GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
 
-        GoogleSignInClient mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-        mGoogleSignInClient.signOut();*/
         FirebaseAuth.getInstance().signOut();
         SharedPrefManager shared = new SharedPrefManager(this);
         shared.setIsLoggedIn(false);
@@ -111,18 +105,11 @@ public class MainActivity extends AppCompatActivity {
         // View
         mUserName = (TextView) mHeaderView.findViewById(R.id.name);
         mUserEmail = (TextView) mHeaderView.findViewById(R.id.email);
-        //mUserImage = (ImageView) mHeaderView.findViewById(R.id.imageView);
 
         // Set username & email
-
         mUserName.setText(Objects.requireNonNull(mAuth.getCurrentUser()).getDisplayName());
         mUserEmail.setText(mAuth.getCurrentUser().getEmail());
-       /* Glide.with(getApplicationContext())
-                .load(mAuth.getCurrentUser().getPhotoUrl())
-                .apply(new RequestOptions()
-                        .placeholder(R.mipmap.ic_launcher)
-                        .fitCenter())
-                .into(mUserImage);*/
+
     }
     public void QuestionAnswerpage(MenuItem item) {
         drawer.closeDrawers();

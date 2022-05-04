@@ -23,12 +23,4 @@
         android:label="Companies"
         tools:layout="@layout/fragment_slideshow" />
 
-    <!--
-    <fragment
-        android:id="@+id/qnaFragment"
-        android:name="com.example.ed_talk.QNA.QNA_homeActivity"
-        android:label="QnA"
-        tools:layout="@layout/activity_qna_home" />
-    -->
-
 </navigation>

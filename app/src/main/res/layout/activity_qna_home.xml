@@ -10,8 +10,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -37,11 +35,8 @@
                 android:layout_height="match_parent"
                 android:id="@+id/recyclerView"/>
 
-
-
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -120,28 +120,8 @@ public class CommentActivity extends AppCompatActivity {
         });
     }
 
-  /*  private void getImage() {
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users")
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                User user = snapshot.getValue(User.class);
-               // Glide.with(CommentActivity.this).load(user.getProfileimageurl()).into(profileImageView);
-            }
-
-            @Override
-            public void onCancelled(@NonNull @NotNull DatabaseError error) {
-                Toast.makeText(CommentActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-    }*/
 
     private void initView() {
-        //toolbar = findViewById(R.id.comment_toolbar);
-       // setSupportActionBar(toolbar);
-       // getSupportActionBar().setTitle("Comments");
-        //profileImageView = findViewById(R.id.cmt_profile_image);
         commentEditText = findViewById(R.id.commentTxt);
         postComment = findViewById(R.id.postComment);
         loader = new ProgressDialog(this);

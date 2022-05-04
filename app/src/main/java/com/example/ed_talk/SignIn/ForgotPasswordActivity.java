@@ -41,13 +41,6 @@ public class ForgotPasswordActivity extends AppCompatActivity implements View.On
 
         auth = FirebaseAuth.getInstance();
 
-//        resetPasswordButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                resetPassword();
-//
-//            }
-//        });
         }
          @Override
          public void onClick(View view) {

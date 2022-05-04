@@ -54,13 +54,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         holder.setIsRecyclable(false);
         user = FirebaseAuth.getInstance().getCurrentUser();
         final Post post = postList.get(position);
-   /*     if (post.getQuestionImage() == null) {
-            holder.questionImage.setVisibility(View.GONE);
-        } else {
-            holder.questionImage.setVisibility(View.VISIBLE);
-        }*/
-       // Glide.with(context).load(post.getQuestionImage())
-        //        .into(holder.questionImage);
+
         holder.questionTextView.setText(post.getQuestion());
         holder.topicTextView.setText(post.getTopic());
         holder.askedOnTextView.setText(post.getDate());
@@ -194,7 +188,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
-            //publisherProfileImage = itemView.findViewById(R.id.publisher_profile_image);
             askedByTextView = itemView.findViewById(R.id.asked_by_txt);
             askedOnTextView = itemView.findViewById(R.id.askedOnTxt);
             topicTextView = itemView.findViewById(R.id.topicnameTxt);
@@ -202,11 +195,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             dislikeTextView = itemView.findViewById(R.id.dislikeCount);
             commentTextView = itemView.findViewById(R.id.commentCount);
             more = itemView.findViewById(R.id.more);
-         //   questionImage = itemView.findViewById(R.id.question_image);
             likeImg = itemView.findViewById(R.id.like);
             dislikeImg = itemView.findViewById(R.id.dislike);
             commentsImg = itemView.findViewById(R.id.comment);
-         //   saveImg = itemView.findViewById(R.id.save);
             questionTextView = itemView.findViewById(R.id.expandable_text);
         }
 
@@ -218,7 +209,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 User user = snapshot.getValue(User.class);
-               // Glide.with(context).load(user.getProfileimageurl()).into(publisherImage);
 
                 if (user != null) {
                     usernameTextView.setText(user.getFullName());
