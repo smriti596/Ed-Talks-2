@@ -92,6 +92,4 @@ public class InterviewExperienceAdapter extends RecyclerView.Adapter<InterviewEx
 
     }
 
-
-
 }

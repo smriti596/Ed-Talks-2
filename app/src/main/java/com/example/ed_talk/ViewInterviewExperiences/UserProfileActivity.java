@@ -74,7 +74,7 @@ public class UserProfileActivity extends Activity {
         like=findViewById(R.id.like_article);
         dislike=findViewById(R.id.dislike_article);
 
-      //  InterviewExperience
+        //InterviewExperience
         user = FirebaseAuth.getInstance().getCurrentUser();
                 interviewExperience = (InterviewExperience)getIntent().getSerializableExtra("StudentDetails");
 
@@ -98,9 +98,7 @@ public class UserProfileActivity extends Activity {
         isLiked(interviewExperience.getChildKey(),like);
         isDisLiked(interviewExperience.getChildKey(), dislike);
         getDislikesCount(dislikeCount, interviewExperience.getChildKey());
-       getLikesCount(likeCount, interviewExperience.getChildKey());
-       //getCommentCount(holder.commentTextView, interviewExperience.getChildKey();
-
+        getLikesCount(likeCount, interviewExperience.getChildKey());
 
         like.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,7 +107,6 @@ public class UserProfileActivity extends Activity {
                     FirebaseDatabase.getInstance().getReference()
                             .child("likes")
                             .child(interviewExperience.getChildKey())
-
                             .child(user.getUid())
                             .setValue(true);
                 } else if (like.getTag().equals("like") && dislike.getTag().equals("disliked") ) {
@@ -117,7 +114,6 @@ public class UserProfileActivity extends Activity {
                     FirebaseDatabase.getInstance().getReference()
                             .child("dislikes")
                             .child(interviewExperience.getChildKey())
-
                             .child(user.getUid())
                             .removeValue();
                     //set like to true
@@ -212,7 +208,8 @@ public class UserProfileActivity extends Activity {
                     Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });
-            }
+        }
+
     public void getLikesCount(TextView lileTxt, String postID) {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("likes").child(postID);
         reference.addValueEventListener(new ValueEventListener() {
@@ -242,7 +239,5 @@ public class UserProfileActivity extends Activity {
             }
         });
     }
-
-
 
 }

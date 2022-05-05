@@ -121,7 +121,6 @@ public class SearchActivity extends Activity {
             }
         });
 
-
         enterSearchText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {

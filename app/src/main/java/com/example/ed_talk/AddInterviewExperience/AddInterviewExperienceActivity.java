@@ -37,11 +37,12 @@ import com.example.ed_talk.R;
 
 public class AddInterviewExperienceActivity extends Activity implements  AdapterView.OnItemSelectedListener{
 
+    //for choosing category
     String[] branches = {"CHOOSE","CSE", "ECE", "Electrical", "Mechatronics","EI","Chemical","Biotechnology","MCA","M.Tech"};
     String[] difficulty={"CHOOSE","Very Easy","Easy","Average","Difficult","Very Difficult"};
     String[] interviewMode ={"CHOOSE","College","Applied Online","Referral"};
 
-    private int mCnfStatus=0;
+    private int mCnfStatus=0;   //made 1 by admin if want to show on the app
     private EditText mStudName,mWhatsappNum,mLinkedInId;
     private Switch mIsInternshipReview;
     private EditText mCompanyName,mJobTitle,mInternCompany,mProjectDesc,mOnlineRound,mTechRound,mHrRound,mWordsToJr;
@@ -116,7 +117,6 @@ public class AddInterviewExperienceActivity extends Activity implements  Adapter
                 hrRound=mHrRound.getText().toString();
                 wordsToJr=mWordsToJr.getText().toString();
 
-                //imageUrlIfProfileNotUploaded = photoUrl;
                 Email=mEmail;
                 // Validate all the required inputs
                 int flag = 0;

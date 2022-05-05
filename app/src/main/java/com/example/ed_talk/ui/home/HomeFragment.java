@@ -130,46 +130,6 @@ public class HomeFragment extends Fragment {
         return root;
     }
 
- /*
-    public void setCarouselViewPager() {
-
-        mSliderReference=FirebaseDatabase.getInstance().getReference().child("Carousel");
-        mSliderReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                SliderImageAndText model=dataSnapshot.getValue(SliderImageAndText.class);
-                sliderImage1=model.getImage1();
-                sliderImage2=model.getImage2();
-                sliderImage3=model.getImage3();
-                sliderText1=model.getText1();
-                sliderText2=model.getText2();
-                sliderText3=model.getText3();
-
-                sliderText = new ArrayList<>();
-                sliderText.add(sliderText1);
-                sliderText.add(sliderText2);
-                sliderText.add(sliderText3);
-
-                sliderImages=new ArrayList<>();
-                sliderImages.add(sliderImage1);
-                sliderImages.add(sliderImage2);
-                sliderImages.add(sliderImage3);
-
-                viewPager.setPageTransformer(false, new FadeOutTransformation());
-                viewPager.setAdapter(new SliderAdapter(getActivity(), sliderImages, sliderText));
-                indicator.setupWithViewPager(viewPager, true);
-
-                Timer timer = new Timer();
-                timer.scheduleAtFixedRate(new SliderTimer(), 5000, 6000);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-            }
-        });
-
-    }
-*/
     @Override
     public void onDestroyView() {
         super.onDestroyView();
@@ -215,35 +175,4 @@ public class HomeFragment extends Fragment {
 
     }
 
-    /*
-    // Fade in fade out animation of carousel
-    public class FadeOutTransformation implements ViewPager.PageTransformer{
-        @Override
-        public void transformPage(View page, float position) {
-            page.setTranslationX(-position*page.getWidth());
-
-            page.setAlpha(1-Math.abs(position));
-        }
-    }
-
-    //carousel image auto-slider
-    public class SliderTimer extends TimerTask {
-        @Override
-        public void run() {
-            if (getActivity() != null) {
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (viewPager.getCurrentItem() < sliderImages.size() - 1) {
-                            viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
-                        } else {
-                            viewPager.setCurrentItem(0);
-                        }
-                    }
-                });
-            } else
-                return;
-        }
-    }
-    */
 }

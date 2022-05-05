@@ -91,7 +91,6 @@ public class InterviewExperienceActivity extends Activity {
             }
         });
 
-
         // Search activity
         searchIcon.setOnClickListener(new View.OnClickListener() {
             @Override

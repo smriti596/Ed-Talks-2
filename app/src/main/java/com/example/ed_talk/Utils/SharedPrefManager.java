@@ -41,4 +41,5 @@ public class SharedPrefManager {
         editor.putBoolean(IS_POPUP_SHOWN,isFirstTime);
         editor.commit();
     }
+
 }
